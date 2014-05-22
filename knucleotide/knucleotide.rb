@@ -3,6 +3,13 @@
 #
 # contributed by Aaron Tavistock
 
+if(ARGV.empty?)
+  puts "Usage rbx knucleotide <logfile> < input_file.txt"
+  exit
+end
+
+logfile = File.new(ARGV[0].to_s, "w")
+
 def frequency(seq, keys)
   counts = Hash.new(0)
   keys.each do |key|
@@ -34,6 +41,7 @@ singles = %w(a t c g)
 doubles = singles.map { |a| singles.map { |b| "#{a}#{b}" }}.flatten
 chains  = %w(ggt ggta ggtatt ggtattttaatt ggtattttaatttatagt)
 
-print "#{percentage(seq, singles).join("\n")}\n\n"
-print "#{percentage(seq, doubles).join("\n")}\n\n"
-print "#{count(seq, chains).join("\n")}\n"
+logfile.print "#{percentage(seq, singles).join("\n")}\n\n"
+logfile.print "#{percentage(seq, doubles).join("\n")}\n\n"
+logfile.print "#{count(seq, chains).join("\n")}\n"
+

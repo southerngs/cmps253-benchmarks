@@ -1,0 +1,407 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      6: logfile, _, seq, singles, doubles, chains
+Stack size:  11
+Literals:    48: :ARGV, :empty?, "Usage rbx knucleotide <logfile> < input_file.txt", :puts, :exit, :File, :new, :allocate, :[], :to_s, "w", :initialize, :frequency, <compiled code>, :method_visibility, :add_defn_method, :percentage, <compiled code>, :count, <compiled code>, :STDIN, :read, nil, :Regexp, "(\\n>THREE[^\\n]*\\n)([^>]*)\\n", :scan, :flatten, "ASCII-8BIT", :force_encoding, nil, "\\s", "", :gsub!, "a", "t", "c", "g", <compiled code>, :map, "ggt", "ggta", "ggtatt", "ggtattttaatt", "ggtattttaatttatagt", "\n", :join, "\n\n", :print
+Lines to IP: 6: 0..6, 7: 7..15, 8: 16..20, 6: 21..21, 0: 22..22, 11: 23..72, 13: 73..86, 24: 87..100, 30: 101..114, 36: 115..155, 37: 156..164, 38: 165..191, 40: 192..208, 41: 209..221, 42: 222..241, 44: 242..269, 45: 270..297, 46: 298..327
+
+0000:  push_const_fast            :ARGV
+0002:  send_stack                 :empty?, 0
+0005:  goto_if_false              0021:
+0007:  push_self                  
+0008:  push_literal               "Usage rbx knucleotide <logfile> < input_file.txt"
+0010:  string_dup                 
+0011:  allow_private              
+0012:  send_stack                 :puts, 1
+0015:  pop                        
+0016:  push_self                  
+0017:  send_method                :exit
+0019:  goto                       0022:
+0021:  push_nil                   
+0022:  pop                        
+0023:  push_const_fast            :File
+0025:  dup_top                    
+0026:  check_serial               :new, 47
+0029:  goto_if_false              0055:
+0031:  allow_private              
+0032:  send_stack                 :allocate, 0
+0035:  dup_top                    
+0036:  push_const_fast            :ARGV
+0038:  meta_push_0                
+0039:  send_stack                 :[], 1
+0042:  send_stack                 :to_s, 0
+0045:  push_literal               "w"
+0047:  string_dup                 
+0048:  allow_private              
+0049:  send_stack                 :initialize, 2
+0052:  pop                        
+0053:  goto                       0070:
+0055:  push_const_fast            :ARGV
+0057:  meta_push_0                
+0058:  send_stack                 :[], 1
+0061:  send_stack                 :to_s, 0
+0064:  push_literal               "w"
+0066:  string_dup                 
+0067:  send_stack                 :new, 2
+0070:  set_local                  0    # logfile
+0072:  pop                        
+0073:  push_rubinius              
+0074:  push_literal               :frequency
+0076:  push_literal               #<Rubinius::CompiledCode frequency file=../knucleotide.rb>
+0078:  push_scope                 
+0079:  push_variables             
+0080:  send_stack                 :method_visibility, 0
+0083:  send_stack                 :add_defn_method, 4
+0086:  pop                        
+0087:  push_rubinius              
+0088:  push_literal               :percentage
+0090:  push_literal               #<Rubinius::CompiledCode percentage file=../knucleotide.rb>
+0092:  push_scope                 
+0093:  push_variables             
+0094:  send_stack                 :method_visibility, 0
+0097:  send_stack                 :add_defn_method, 4
+0100:  pop                        
+0101:  push_rubinius              
+0102:  push_literal               :count
+0104:  push_literal               #<Rubinius::CompiledCode count file=../knucleotide.rb>
+0106:  push_scope                 
+0107:  push_variables             
+0108:  send_stack                 :method_visibility, 0
+0111:  send_stack                 :add_defn_method, 4
+0114:  pop                        
+0115:  push_const_fast            :STDIN
+0117:  send_stack                 :read, 0
+0120:  push_literal               nil
+0122:  dup_top                    
+0123:  is_nil                     
+0124:  goto_if_false              0138:
+0126:  pop                        
+0127:  push_cpath_top             
+0128:  find_const_fast            :Regexp
+0130:  push_literal               "(\\n>THREE[^\\n]*\\n)([^>]*)\\n"
+0132:  meta_push_0                
+0133:  send_stack                 :new, 2
+0136:  set_literal                nil
+0138:  send_stack                 :scan, 1
+0141:  send_stack                 :flatten, 0
+0144:  cast_multi_value           
+0145:  dup_top                    
+0146:  shift_array                
+0147:  set_local                  1    # _
+0149:  pop                        
+0150:  shift_array                
+0151:  set_local                  2    # seq
+0153:  pop                        
+0154:  pop                        
+0155:  pop                        
+0156:  push_local                 2    # seq
+0158:  push_literal               "ASCII-8BIT"
+0160:  string_dup                 
+0161:  send_stack                 :force_encoding, 1
+0164:  pop                        
+0165:  push_local                 2    # seq
+0167:  push_literal               nil
+0169:  dup_top                    
+0170:  is_nil                     
+0171:  goto_if_false              0185:
+0173:  pop                        
+0174:  push_cpath_top             
+0175:  find_const_fast            :Regexp
+0177:  push_literal               "\\s"
+0179:  meta_push_0                
+0180:  send_stack                 :new, 2
+0183:  set_literal                nil
+0185:  push_literal               ""
+0187:  string_dup                 
+0188:  send_stack                 :gsub!, 2
+0191:  pop                        
+0192:  push_literal               "a"
+0194:  string_dup                 
+0195:  push_literal               "t"
+0197:  string_dup                 
+0198:  push_literal               "c"
+0200:  string_dup                 
+0201:  push_literal               "g"
+0203:  string_dup                 
+0204:  make_array                 4
+0206:  set_local                  3    # singles
+0208:  pop                        
+0209:  push_local                 3    # singles
+0211:  create_block               #<Rubinius::CompiledCode __block__ file=../knucleotide.rb>
+0213:  send_stack_with_block      :map, 0
+0216:  send_stack                 :flatten, 0
+0219:  set_local                  4    # doubles
+0221:  pop                        
+0222:  push_literal               "ggt"
+0224:  string_dup                 
+0225:  push_literal               "ggta"
+0227:  string_dup                 
+0228:  push_literal               "ggtatt"
+0230:  string_dup                 
+0231:  push_literal               "ggtattttaatt"
+0233:  string_dup                 
+0234:  push_literal               "ggtattttaatttatagt"
+0236:  string_dup                 
+0237:  make_array                 5
+0239:  set_local                  5    # chains
+0241:  pop                        
+0242:  push_local                 0    # logfile
+0244:  push_self                  
+0245:  push_local                 2    # seq
+0247:  push_local                 3    # singles
+0249:  allow_private              
+0250:  send_stack                 :percentage, 2
+0253:  push_literal               "\n"
+0255:  string_dup                 
+0256:  send_stack                 :join, 1
+0259:  allow_private              
+0260:  meta_to_s                  :to_s
+0262:  push_literal               "\n\n"
+0264:  string_build               2
+0266:  send_stack                 :print, 1
+0269:  pop                        
+0270:  push_local                 0    # logfile
+0272:  push_self                  
+0273:  push_local                 2    # seq
+0275:  push_local                 4    # doubles
+0277:  allow_private              
+0278:  send_stack                 :percentage, 2
+0281:  push_literal               "\n"
+0283:  string_dup                 
+0284:  send_stack                 :join, 1
+0287:  allow_private              
+0288:  meta_to_s                  :to_s
+0290:  push_literal               "\n\n"
+0292:  string_build               2
+0294:  send_stack                 :print, 1
+0297:  pop                        
+0298:  push_local                 0    # logfile
+0300:  push_self                  
+0301:  push_local                 2    # seq
+0303:  push_local                 5    # chains
+0305:  allow_private              
+0306:  send_stack                 :count, 2
+0309:  push_literal               "\n"
+0311:  string_dup                 
+0312:  send_stack                 :join, 1
+0315:  allow_private              
+0316:  meta_to_s                  :to_s
+0318:  push_literal               "\n"
+0320:  string_build               2
+0322:  send_stack                 :print, 1
+0325:  pop                        
+0326:  push_true                  
+0327:  ret                        
+----------------------------------------
+
+============== :frequency ==============
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      3: seq, keys, counts
+Stack size:  6
+Literals:    6: :Hash, :new, :allocate, :initialize, <compiled code>, :each
+Line:        13
+Lines to IP: 14: 0..27, 15: 28..35, 21: 36..38
+
+0000:  push_const_fast            :Hash
+0002:  dup_top                    
+0003:  check_serial               :new, 47
+0006:  goto_if_false              0021:
+0008:  allow_private              
+0009:  send_stack                 :allocate, 0
+0012:  dup_top                    
+0013:  meta_push_0                
+0014:  allow_private              
+0015:  send_stack                 :initialize, 1
+0018:  pop                        
+0019:  goto                       0025:
+0021:  meta_push_0                
+0022:  send_stack                 :new, 1
+0025:  set_local                  2    # counts
+0027:  pop                        
+0028:  push_local                 1    # keys
+0030:  create_block               #<Rubinius::CompiledCode frequency file=../knucleotide.rb>
+0032:  send_stack_with_block      :each, 0
+0035:  pop                        
+0036:  push_local                 2    # counts
+0038:  ret                        
+----------------------------------------
+
+============== :frequency ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      2: key, last_index
+Stack size:  7
+Literals:    4: :+, :index, :[], :[]=
+Line:        15
+Lines to IP: 16: 0..3, 17: 4..21, 18: 22..46, 0: 47..48
+
+0000:  meta_push_0                
+0001:  set_local                  1
+0003:  pop                        
+0004:  push_local_depth           1, 0
+0007:  push_local                 0
+0009:  push_local                 1
+0011:  meta_push_1                
+0012:  send_stack                 :+, 1
+0015:  send_stack                 :index, 2
+0018:  set_local                  1
+0020:  goto_if_false              0047:
+0022:  push_local_depth           1, 2
+0025:  push_local                 0
+0027:  dup_many                   2
+0029:  send_stack                 :[], 1
+0032:  meta_push_1                
+0033:  send_stack                 :+, 1
+0036:  dup_top                    
+0037:  move_down                  3
+0039:  send_stack                 :[]=, 2
+0042:  pop                        
+0043:  pop                        
+0044:  check_interrupts           
+0045:  goto                       0004:
+0047:  push_nil                   
+0048:  ret                        
+----------------------------------------
+
+============= :percentage ==============
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: seq, keys
+Stack size:  5
+Literals:    5: :frequency, <compiled code>, :sort, <compiled code>, :map
+Line:        24
+Lines to IP: 25: 0..19
+
+0000:  push_self                  
+0001:  push_local                 0    # seq
+0003:  push_local                 1    # keys
+0005:  allow_private              
+0006:  send_stack                 :frequency, 2
+0009:  create_block               #<Rubinius::CompiledCode percentage file=../knucleotide.rb>
+0011:  send_stack_with_block      :sort, 0
+0014:  create_block               #<Rubinius::CompiledCode percentage file=../knucleotide.rb>
+0016:  send_stack_with_block      :map, 0
+0019:  ret                        
+----------------------------------------
+
+============= :percentage ==============
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: a, b
+Stack size:  6
+Literals:    2: :[], :<=>
+Line:        25
+Lines to IP: 
+
+0000:  push_local                 1
+0002:  meta_push_1                
+0003:  send_stack                 :[], 1
+0006:  push_local                 0
+0008:  meta_push_1                
+0009:  send_stack                 :[], 1
+0012:  send_stack                 :<=>, 1
+0015:  ret                        
+----------------------------------------
+
+============= :percentage ==============
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: key, value
+Stack size:  7
+Literals:    7: "%s %.3f", :upcase, :*, :to_f, :size, :/, :%
+Line:        25
+Lines to IP: 26: 0..32
+
+0000:  push_literal               "%s %.3f"
+0002:  string_dup                 
+0003:  push_local                 0
+0005:  send_stack                 :upcase, 0
+0008:  push_local                 1
+0010:  push_int                   100
+0012:  send_stack                 :*, 1
+0015:  send_stack                 :to_f, 0
+0018:  push_local_depth           1, 0
+0021:  send_stack                 :size, 0
+0024:  send_stack                 :/, 1
+0027:  make_array                 2
+0029:  send_stack                 :%, 1
+0032:  ret                        
+----------------------------------------
+
+================ :count ================
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: seq, keys
+Stack size:  5
+Literals:    3: :frequency, <compiled code>, :map
+Line:        30
+Lines to IP: 31: 0..14
+
+0000:  push_self                  
+0001:  push_local                 0    # seq
+0003:  push_local                 1    # keys
+0005:  allow_private              
+0006:  send_stack                 :frequency, 2
+0009:  create_block               #<Rubinius::CompiledCode count file=../knucleotide.rb>
+0011:  send_stack_with_block      :map, 0
+0014:  ret                        
+----------------------------------------
+
+================ :count ================
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: key, value
+Stack size:  6
+Literals:    3: :to_s, "\t", :upcase
+Line:        31
+Lines to IP: 32: 0..20
+
+0000:  push_local                 1
+0002:  send_stack                 :to_s, 0
+0005:  allow_private              
+0006:  meta_to_s                  :to_s
+0008:  push_literal               "\t"
+0010:  push_local                 0
+0012:  send_stack                 :upcase, 0
+0015:  allow_private              
+0016:  meta_to_s                  :to_s
+0018:  string_build               3
+0020:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: a
+Stack size:  4
+Literals:    2: <compiled code>, :map
+Line:        41
+Lines to IP: 
+
+0000:  push_local_depth           1, 3
+0003:  create_block               #<Rubinius::CompiledCode __block__ file=../knucleotide.rb>
+0005:  send_stack_with_block      :map, 0
+0008:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: b
+Stack size:  4
+Literals:    1: :to_s
+Line:        41
+Lines to IP: 
+
+0000:  push_local_depth           1, 0
+0003:  allow_private              
+0004:  meta_to_s                  :to_s
+0006:  push_local                 0
+0008:  allow_private              
+0009:  meta_to_s                  :to_s
+0011:  string_build               2
+0013:  ret                        
+----------------------------------------
