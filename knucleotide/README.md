@@ -23,7 +23,7 @@ The benchmark reads from `stdin`. To run use a file that is generated from the f
 ##Parameters
 
 ###Ruby
-Use input files in the [input](../input) directory.  Suggested sizes are:
+Use input files in the `input` directory.  Suggested sizes are:
 
     fasta250000.txt     (about 2 seconds) 
     fasta2500000.txt    (about 15 seconds)
