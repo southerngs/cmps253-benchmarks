@@ -1,0 +1,367 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      5: u, v, vBv, vv, i
+Stack size:  11
+Literals:    31: :ARRAY_LENGTH, :ARGV, :[], :to_i, :const_set, :Array, :new, :allocate, :initialize, :eval_A, <compiled code>, :method_visibility, :add_defn_method, :vector_times_array, <compiled code>, :vector_times_array_transposed, <compiled code>, :vector_times_array_times_array_transposed, <compiled code>, <compiled code>, :times, :<, :*, :+, "%0.9f", :Math, :/, :sqrt, :%, "\n", :print
+Lines to IP: 10: 0..15, 12: 16..47, 13: 48..52, 15: 53..66, 19: 67..80, 33: 81..94, 47: 95..108, 51: 109..116, 56: 117..137, 57: 138..146, 58: 147..171, 59: 172..196, 60: 197..208, 0: 209..210, 63: 211..239
+
+0000:  push_scope                 
+0001:  push_literal               :ARRAY_LENGTH
+0003:  push_const_fast            :ARGV
+0005:  meta_push_0                
+0006:  send_stack                 :[], 1
+0009:  send_stack                 :to_i, 0
+0012:  send_stack                 :const_set, 2
+0015:  pop                        
+0016:  push_const_fast            :Array
+0018:  dup_top                    
+0019:  check_serial               :new, 47
+0022:  goto_if_false              0039:
+0024:  allow_private              
+0025:  send_stack                 :allocate, 0
+0028:  dup_top                    
+0029:  push_const_fast            :ARRAY_LENGTH
+0031:  meta_push_1                
+0032:  allow_private              
+0033:  send_stack                 :initialize, 2
+0036:  pop                        
+0037:  goto                       0045:
+0039:  push_const_fast            :ARRAY_LENGTH
+0041:  meta_push_1                
+0042:  send_stack                 :new, 2
+0045:  set_local                  0    # u
+0047:  pop                        
+0048:  make_array                 0
+0050:  set_local                  1    # v
+0052:  pop                        
+0053:  push_rubinius              
+0054:  push_literal               :eval_A
+0056:  push_literal               #<Rubinius::CompiledCode eval_A file=../spectralnorm.rb>
+0058:  push_scope                 
+0059:  push_variables             
+0060:  send_stack                 :method_visibility, 0
+0063:  send_stack                 :add_defn_method, 4
+0066:  pop                        
+0067:  push_rubinius              
+0068:  push_literal               :vector_times_array
+0070:  push_literal               #<Rubinius::CompiledCode vector_times_array file=../spectralnorm.rb>
+0072:  push_scope                 
+0073:  push_variables             
+0074:  send_stack                 :method_visibility, 0
+0077:  send_stack                 :add_defn_method, 4
+0080:  pop                        
+0081:  push_rubinius              
+0082:  push_literal               :vector_times_array_transposed
+0084:  push_literal               #<Rubinius::CompiledCode vector_times_array_transposed file=../spectralnorm.rb>
+0086:  push_scope                 
+0087:  push_variables             
+0088:  send_stack                 :method_visibility, 0
+0091:  send_stack                 :add_defn_method, 4
+0094:  pop                        
+0095:  push_rubinius              
+0096:  push_literal               :vector_times_array_times_array_transposed
+0098:  push_literal               #<Rubinius::CompiledCode vector_times_array_times_array_transposed file=../spectralnorm.rb>
+0100:  push_scope                 
+0101:  push_variables             
+0102:  send_stack                 :method_visibility, 0
+0105:  send_stack                 :add_defn_method, 4
+0108:  pop                        
+0109:  push_int                   10
+0111:  create_block               #<Rubinius::CompiledCode __block__ file=../spectralnorm.rb>
+0113:  send_stack_with_block      :times, 0
+0116:  pop                        
+0117:  meta_push_0                
+0118:  meta_push_0                
+0119:  meta_push_0                
+0120:  dup_many                   3
+0122:  make_array                 3
+0124:  move_down                  3
+0126:  rotate                     3
+0128:  set_local                  2    # vBv
+0130:  pop                        
+0131:  set_local                  3    # vv
+0133:  pop                        
+0134:  set_local                  4    # i
+0136:  pop                        
+0137:  pop                        
+0138:  push_local                 4    # i
+0140:  push_const_fast            :ARRAY_LENGTH
+0142:  send_stack                 :<, 1
+0145:  goto_if_false              0209:
+0147:  push_local                 2    # vBv
+0149:  push_local                 0    # u
+0151:  push_local                 4    # i
+0153:  send_stack                 :[], 1
+0156:  push_local                 1    # v
+0158:  push_local                 4    # i
+0160:  send_stack                 :[], 1
+0163:  send_stack                 :*, 1
+0166:  send_stack                 :+, 1
+0169:  set_local                  2    # vBv
+0171:  pop                        
+0172:  push_local                 3    # vv
+0174:  push_local                 1    # v
+0176:  push_local                 4    # i
+0178:  send_stack                 :[], 1
+0181:  push_local                 1    # v
+0183:  push_local                 4    # i
+0185:  send_stack                 :[], 1
+0188:  send_stack                 :*, 1
+0191:  send_stack                 :+, 1
+0194:  set_local                  3    # vv
+0196:  pop                        
+0197:  push_local                 4    # i
+0199:  meta_push_1                
+0200:  send_stack                 :+, 1
+0203:  set_local                  4    # i
+0205:  pop                        
+0206:  check_interrupts           
+0207:  goto                       0138:
+0209:  push_nil                   
+0210:  pop                        
+0211:  push_self                  
+0212:  push_literal               "%0.9f"
+0214:  string_dup                 
+0215:  push_const_fast            :Math
+0217:  push_local                 2    # vBv
+0219:  push_local                 3    # vv
+0221:  send_stack                 :/, 1
+0224:  send_stack                 :sqrt, 1
+0227:  send_stack                 :%, 1
+0230:  push_literal               "\n"
+0232:  string_dup                 
+0233:  allow_private              
+0234:  send_stack                 :print, 2
+0237:  pop                        
+0238:  push_true                  
+0239:  ret                        
+----------------------------------------
+
+=============== :eval_A ================
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: i, j
+Stack size:  6
+Literals:    4: 1.0, :+, :*, :/
+Line:        15
+Lines to IP: 16: 0..39
+
+0000:  push_literal               1.0
+0002:  push_local                 0    # i
+0004:  push_local                 1    # j
+0006:  send_stack                 :+, 1
+0009:  push_local                 0    # i
+0011:  push_local                 1    # j
+0013:  send_stack                 :+, 1
+0016:  meta_push_1                
+0017:  send_stack                 :+, 1
+0020:  send_stack                 :*, 1
+0023:  meta_push_2                
+0024:  send_stack                 :/, 1
+0027:  push_local                 0    # i
+0029:  send_stack                 :+, 1
+0032:  meta_push_1                
+0033:  send_stack                 :+, 1
+0036:  send_stack                 :/, 1
+0039:  ret                        
+----------------------------------------
+
+========= :vector_times_array ==========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      5: vector, arr, i, sum, j
+Stack size:  9
+Literals:    7: :ARRAY_LENGTH, :<, :eval_A, :[], :*, :+, :<<
+Line:        19
+Lines to IP: 20: 0..17, 21: 18..26, 22: 27..43, 23: 44..52, 24: 53..79, 25: 80..91, 0: 92..93, 27: 94..101, 28: 102..113, 0: 114..115, 30: 116..118
+
+0000:  make_array                 0
+0002:  meta_push_0                
+0003:  dup_many                   2
+0005:  make_array                 2
+0007:  move_down                  2
+0009:  rotate                     2
+0011:  set_local                  1    # arr
+0013:  pop                        
+0014:  set_local                  2    # i
+0016:  pop                        
+0017:  pop                        
+0018:  push_local                 2    # i
+0020:  push_const_fast            :ARRAY_LENGTH
+0022:  send_stack                 :<, 1
+0025:  goto_if_false              0114:
+0027:  meta_push_0                
+0028:  meta_push_0                
+0029:  dup_many                   2
+0031:  make_array                 2
+0033:  move_down                  2
+0035:  rotate                     2
+0037:  set_local                  3    # sum
+0039:  pop                        
+0040:  set_local                  4    # j
+0042:  pop                        
+0043:  pop                        
+0044:  push_local                 4    # j
+0046:  push_const_fast            :ARRAY_LENGTH
+0048:  send_stack                 :<, 1
+0051:  goto_if_false              0092:
+0053:  push_local                 3    # sum
+0055:  push_self                  
+0056:  push_local                 2    # i
+0058:  push_local                 4    # j
+0060:  allow_private              
+0061:  send_stack                 :eval_A, 2
+0064:  push_local                 0    # vector
+0066:  push_local                 4    # j
+0068:  send_stack                 :[], 1
+0071:  send_stack                 :*, 1
+0074:  send_stack                 :+, 1
+0077:  set_local                  3    # sum
+0079:  pop                        
+0080:  push_local                 4    # j
+0082:  meta_push_1                
+0083:  send_stack                 :+, 1
+0086:  set_local                  4    # j
+0088:  pop                        
+0089:  check_interrupts           
+0090:  goto                       0044:
+0092:  push_nil                   
+0093:  pop                        
+0094:  push_local                 1    # arr
+0096:  push_local                 3    # sum
+0098:  send_stack                 :<<, 1
+0101:  pop                        
+0102:  push_local                 2    # i
+0104:  meta_push_1                
+0105:  send_stack                 :+, 1
+0108:  set_local                  2    # i
+0110:  pop                        
+0111:  check_interrupts           
+0112:  goto                       0018:
+0114:  push_nil                   
+0115:  pop                        
+0116:  push_local                 1    # arr
+0118:  ret                        
+----------------------------------------
+
+==== :vector_times_array_transposed ====
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      5: vector, arr, i, sum, j
+Stack size:  9
+Literals:    7: :ARRAY_LENGTH, :<, :eval_A, :[], :*, :+, :<<
+Line:        33
+Lines to IP: 34: 0..17, 35: 18..26, 36: 27..43, 37: 44..52, 38: 53..79, 39: 80..91, 0: 92..93, 41: 94..101, 42: 102..113, 0: 114..115, 44: 116..118
+
+0000:  make_array                 0
+0002:  meta_push_0                
+0003:  dup_many                   2
+0005:  make_array                 2
+0007:  move_down                  2
+0009:  rotate                     2
+0011:  set_local                  1    # arr
+0013:  pop                        
+0014:  set_local                  2    # i
+0016:  pop                        
+0017:  pop                        
+0018:  push_local                 2    # i
+0020:  push_const_fast            :ARRAY_LENGTH
+0022:  send_stack                 :<, 1
+0025:  goto_if_false              0114:
+0027:  meta_push_0                
+0028:  meta_push_0                
+0029:  dup_many                   2
+0031:  make_array                 2
+0033:  move_down                  2
+0035:  rotate                     2
+0037:  set_local                  3    # sum
+0039:  pop                        
+0040:  set_local                  4    # j
+0042:  pop                        
+0043:  pop                        
+0044:  push_local                 4    # j
+0046:  push_const_fast            :ARRAY_LENGTH
+0048:  send_stack                 :<, 1
+0051:  goto_if_false              0092:
+0053:  push_local                 3    # sum
+0055:  push_self                  
+0056:  push_local                 4    # j
+0058:  push_local                 2    # i
+0060:  allow_private              
+0061:  send_stack                 :eval_A, 2
+0064:  push_local                 0    # vector
+0066:  push_local                 4    # j
+0068:  send_stack                 :[], 1
+0071:  send_stack                 :*, 1
+0074:  send_stack                 :+, 1
+0077:  set_local                  3    # sum
+0079:  pop                        
+0080:  push_local                 4    # j
+0082:  meta_push_1                
+0083:  send_stack                 :+, 1
+0086:  set_local                  4    # j
+0088:  pop                        
+0089:  check_interrupts           
+0090:  goto                       0044:
+0092:  push_nil                   
+0093:  pop                        
+0094:  push_local                 1    # arr
+0096:  push_local                 3    # sum
+0098:  send_stack                 :<<, 1
+0101:  pop                        
+0102:  push_local                 2    # i
+0104:  meta_push_1                
+0105:  send_stack                 :+, 1
+0108:  set_local                  2    # i
+0110:  pop                        
+0111:  check_interrupts           
+0112:  goto                       0018:
+0114:  push_nil                   
+0115:  pop                        
+0116:  push_local                 1    # arr
+0118:  ret                        
+----------------------------------------
+
+= :vector_times_array_times_array_transposed =
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: vector
+Stack size:  4
+Literals:    2: :vector_times_array, :vector_times_array_transposed
+Line:        47
+Lines to IP: 48: 0..12
+
+0000:  push_self                  
+0001:  push_self                  
+0002:  push_local                 0    # vector
+0004:  allow_private              
+0005:  send_stack                 :vector_times_array, 1
+0008:  allow_private              
+0009:  send_stack                 :vector_times_array_transposed, 1
+0012:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      0
+Stack size:  3
+Literals:    1: :vector_times_array_times_array_transposed
+Line:        51
+Lines to IP: 52: 0..11, 53: 12..23
+
+0000:  push_self                  
+0001:  push_local_depth           1, 0
+0004:  allow_private              
+0005:  send_stack                 :vector_times_array_times_array_transposed, 1
+0008:  set_local_depth            1, 1
+0011:  pop                        
+0012:  push_self                  
+0013:  push_local_depth           1, 1
+0016:  allow_private              
+0017:  send_stack                 :vector_times_array_times_array_transposed, 1
+0020:  set_local_depth            1, 0
+0023:  ret                        
+----------------------------------------
