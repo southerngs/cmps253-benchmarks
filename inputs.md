@@ -1,1 +1,0 @@
-Steps for generating input
