@@ -1,0 +1,311 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      7: logfile, seq, origin_len, clean_len, matchers, results, replacements
+Stack size:  16
+Literals:    65: :ARGV, :size, :!=, "Usage: rbx regexdna.rb <logfile> < <input_file>", :puts, :exit, :File, :new, :allocate, :[], :to_s, "w", :initialize, "fiber", :require, :Globals, :$stdin, :read, "ASCII-8BIT", :force_encoding, nil, :Regexp, ">.*\\n|\\n", "", :gsub!, "agggtaaa|tttaccct", "[cgt]gggtaaa|tttaccc[acg]", "a[act]ggtaaa|tttacc[agt]t", "ag[act]gtaaa|tttac[agt]ct", "agg[act]taaa|ttta[agt]cct", "aggg[acg]aaa|ttt[cgt]ccct", "agggt[cgt]aa|tt[acg]accct", "agggta[cgt]a|t[acg]taccct", "agggtaa[cgt]|[acg]ttaccct", <compiled code>, :map, :Hash, :new_from_literal, "B", "(c|g|t)", :[]=, "D", "(a|g|t)", "H", "(a|c|t)", "K", "(g|t)", "M", "(a|c)", "N", "(a|c|g|t)", "R", "(a|g)", "S", "(c|t)", "V", "(a|c|g)", "W", "(a|t)", "Y", :keys, "|", :join, "\n", "\n\n"
+Lines to IP: 8: 0..10, 9: 11..19, 10: 20..27, 8: 28..28, 0: 29..29, 13: 30..79, 15: 80..88, 17: 89..108, 18: 109..116, 20: 117..143, 21: 144..151, 24: 152..154, 25: 155..157, 26: 158..160, 27: 161..163, 28: 164..166, 29: 167..169, 30: 170..172, 31: 173..175, 32: 176..180, 23: 181..183, 35: 184..193, 54: 194..202, 43: 203..213, 44: 214..224, 45: 225..235, 46: 236..246, 47: 247..257, 48: 258..268, 49: 269..279, 50: 280..290, 51: 291..301, 52: 302..312, 53: 313..322, 42: 323..325, 55: 326..378, 57: 379..423
+
+0000:  push_const_fast            :ARGV
+0002:  send_stack                 :size, 0
+0005:  meta_push_1                
+0006:  send_stack                 :!=, 1
+0009:  goto_if_false              0028:
+0011:  push_self                  
+0012:  push_literal               "Usage: rbx regexdna.rb <logfile> < <input_file>"
+0014:  string_dup                 
+0015:  allow_private              
+0016:  send_stack                 :puts, 1
+0019:  pop                        
+0020:  push_self                  
+0021:  meta_push_1                
+0022:  allow_private              
+0023:  send_stack                 :exit, 1
+0026:  goto                       0029:
+0028:  push_nil                   
+0029:  pop                        
+0030:  push_const_fast            :File
+0032:  dup_top                    
+0033:  check_serial               :new, 47
+0036:  goto_if_false              0062:
+0038:  allow_private              
+0039:  send_stack                 :allocate, 0
+0042:  dup_top                    
+0043:  push_const_fast            :ARGV
+0045:  meta_push_0                
+0046:  send_stack                 :[], 1
+0049:  send_stack                 :to_s, 0
+0052:  push_literal               "w"
+0054:  string_dup                 
+0055:  allow_private              
+0056:  send_stack                 :initialize, 2
+0059:  pop                        
+0060:  goto                       0077:
+0062:  push_const_fast            :ARGV
+0064:  meta_push_0                
+0065:  send_stack                 :[], 1
+0068:  send_stack                 :to_s, 0
+0071:  push_literal               "w"
+0073:  string_dup                 
+0074:  send_stack                 :new, 2
+0077:  set_local                  0    # logfile
+0079:  pop                        
+0080:  push_self                  
+0081:  push_literal               "fiber"
+0083:  string_dup                 
+0084:  allow_private              
+0085:  send_stack                 :require, 1
+0088:  pop                        
+0089:  push_rubinius              
+0090:  find_const_fast            :Globals
+0092:  push_literal               :$stdin
+0094:  send_stack                 :[], 1
+0097:  send_stack                 :read, 0
+0100:  push_literal               "ASCII-8BIT"
+0102:  string_dup                 
+0103:  send_stack                 :force_encoding, 1
+0106:  set_local                  1    # seq
+0108:  pop                        
+0109:  push_local                 1    # seq
+0111:  send_stack                 :size, 0
+0114:  set_local                  2    # origin_len
+0116:  pop                        
+0117:  push_local                 1    # seq
+0119:  push_literal               nil
+0121:  dup_top                    
+0122:  is_nil                     
+0123:  goto_if_false              0137:
+0125:  pop                        
+0126:  push_cpath_top             
+0127:  find_const_fast            :Regexp
+0129:  push_literal               ">.*\\n|\\n"
+0131:  meta_push_0                
+0132:  send_stack                 :new, 2
+0135:  set_literal                nil
+0137:  push_literal               ""
+0139:  string_dup                 
+0140:  send_stack                 :gsub!, 2
+0143:  pop                        
+0144:  push_local                 1    # seq
+0146:  send_stack                 :size, 0
+0149:  set_local                  3    # clean_len
+0151:  pop                        
+0152:  push_literal               "agggtaaa|tttaccct"
+0154:  string_dup                 
+0155:  push_literal               "[cgt]gggtaaa|tttaccc[acg]"
+0157:  string_dup                 
+0158:  push_literal               "a[act]ggtaaa|tttacc[agt]t"
+0160:  string_dup                 
+0161:  push_literal               "ag[act]gtaaa|tttac[agt]ct"
+0163:  string_dup                 
+0164:  push_literal               "agg[act]taaa|ttta[agt]cct"
+0166:  string_dup                 
+0167:  push_literal               "aggg[acg]aaa|ttt[cgt]ccct"
+0169:  string_dup                 
+0170:  push_literal               "agggt[cgt]aa|tt[acg]accct"
+0172:  string_dup                 
+0173:  push_literal               "agggta[cgt]a|t[acg]taccct"
+0175:  string_dup                 
+0176:  push_literal               "agggtaa[cgt]|[acg]ttaccct"
+0178:  string_dup                 
+0179:  make_array                 9
+0181:  set_local                  4    # matchers
+0183:  pop                        
+0184:  push_local                 4    # matchers
+0186:  create_block               #<Rubinius::CompiledCode __block__ file=../regexdna.rb>
+0188:  send_stack_with_block      :map, 0
+0191:  set_local                  5    # results
+0193:  pop                        
+0194:  push_cpath_top             
+0195:  find_const_fast            :Hash
+0197:  push_int                   11
+0199:  send_stack                 :new_from_literal, 1
+0202:  dup_top                    
+0203:  push_literal               "B"
+0205:  string_dup                 
+0206:  push_literal               "(c|g|t)"
+0208:  string_dup                 
+0209:  send_stack                 :[]=, 2
+0212:  pop                        
+0213:  dup_top                    
+0214:  push_literal               "D"
+0216:  string_dup                 
+0217:  push_literal               "(a|g|t)"
+0219:  string_dup                 
+0220:  send_stack                 :[]=, 2
+0223:  pop                        
+0224:  dup_top                    
+0225:  push_literal               "H"
+0227:  string_dup                 
+0228:  push_literal               "(a|c|t)"
+0230:  string_dup                 
+0231:  send_stack                 :[]=, 2
+0234:  pop                        
+0235:  dup_top                    
+0236:  push_literal               "K"
+0238:  string_dup                 
+0239:  push_literal               "(g|t)"
+0241:  string_dup                 
+0242:  send_stack                 :[]=, 2
+0245:  pop                        
+0246:  dup_top                    
+0247:  push_literal               "M"
+0249:  string_dup                 
+0250:  push_literal               "(a|c)"
+0252:  string_dup                 
+0253:  send_stack                 :[]=, 2
+0256:  pop                        
+0257:  dup_top                    
+0258:  push_literal               "N"
+0260:  string_dup                 
+0261:  push_literal               "(a|c|g|t)"
+0263:  string_dup                 
+0264:  send_stack                 :[]=, 2
+0267:  pop                        
+0268:  dup_top                    
+0269:  push_literal               "R"
+0271:  string_dup                 
+0272:  push_literal               "(a|g)"
+0274:  string_dup                 
+0275:  send_stack                 :[]=, 2
+0278:  pop                        
+0279:  dup_top                    
+0280:  push_literal               "S"
+0282:  string_dup                 
+0283:  push_literal               "(c|t)"
+0285:  string_dup                 
+0286:  send_stack                 :[]=, 2
+0289:  pop                        
+0290:  dup_top                    
+0291:  push_literal               "V"
+0293:  string_dup                 
+0294:  push_literal               "(a|c|g)"
+0296:  string_dup                 
+0297:  send_stack                 :[]=, 2
+0300:  pop                        
+0301:  dup_top                    
+0302:  push_literal               "W"
+0304:  string_dup                 
+0305:  push_literal               "(a|t)"
+0307:  string_dup                 
+0308:  send_stack                 :[]=, 2
+0311:  pop                        
+0312:  dup_top                    
+0313:  push_literal               "Y"
+0315:  string_dup                 
+0316:  push_literal               "(c|t)"
+0318:  string_dup                 
+0319:  send_stack                 :[]=, 2
+0322:  pop                        
+0323:  set_local                  6    # replacements
+0325:  pop                        
+0326:  push_local                 1    # seq
+0328:  push_const_fast            :Regexp
+0330:  dup_top                    
+0331:  check_serial               :new, 47
+0334:  goto_if_false              0359:
+0336:  allow_private              
+0337:  send_stack                 :allocate, 0
+0340:  dup_top                    
+0341:  push_local                 6    # replacements
+0343:  send_stack                 :keys, 0
+0346:  push_literal               "|"
+0348:  string_dup                 
+0349:  send_stack                 :join, 1
+0352:  allow_private              
+0353:  send_stack                 :initialize, 1
+0356:  pop                        
+0357:  goto                       0373:
+0359:  push_local                 6    # replacements
+0361:  send_stack                 :keys, 0
+0364:  push_literal               "|"
+0366:  string_dup                 
+0367:  send_stack                 :join, 1
+0370:  send_stack                 :new, 1
+0373:  push_local                 6    # replacements
+0375:  send_stack                 :gsub!, 2
+0378:  pop                        
+0379:  push_local                 0    # logfile
+0381:  push_local                 5    # results
+0383:  push_literal               "\n"
+0385:  string_dup                 
+0386:  send_stack                 :join, 1
+0389:  allow_private              
+0390:  meta_to_s                  :to_s
+0392:  push_literal               "\n\n"
+0394:  push_local                 2    # origin_len
+0396:  allow_private              
+0397:  meta_to_s                  :to_s
+0399:  push_literal               "\n"
+0401:  push_local                 3    # clean_len
+0403:  allow_private              
+0404:  meta_to_s                  :to_s
+0406:  push_literal               "\n"
+0408:  push_local                 1    # seq
+0410:  send_stack                 :size, 0
+0413:  allow_private              
+0414:  meta_to_s                  :to_s
+0416:  string_build               7
+0418:  send_stack                 :puts, 1
+0421:  pop                        
+0422:  push_true                  
+0423:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: matcher
+Stack size:  4
+Literals:    4: :Fiber, <compiled code>, :new, :resume
+Line:        35
+Lines to IP: 36: 0..10
+
+0000:  push_const_fast            :Fiber
+0002:  create_block               #<Rubinius::CompiledCode __block__ file=../regexdna.rb>
+0004:  send_stack_with_block      :new, 0
+0007:  send_stack                 :resume, 0
+0010:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      1: count
+Stack size:  6
+Literals:    10: :Regexp, :new, :allocate, :initialize, :scan, :size, :Fiber, :to_s, " ", :yield
+Line:        36
+Lines to IP: 37: 0..40, 38: 41..61
+
+0000:  push_local_depth           2, 1
+0003:  push_const_fast            :Regexp
+0005:  dup_top                    
+0006:  check_serial               :new, 47
+0009:  goto_if_false              0026:
+0011:  allow_private              
+0012:  send_stack                 :allocate, 0
+0015:  dup_top                    
+0016:  push_local_depth           1, 0
+0019:  allow_private              
+0020:  send_stack                 :initialize, 1
+0023:  pop                        
+0024:  goto                       0032:
+0026:  push_local_depth           1, 0
+0029:  send_stack                 :new, 1
+0032:  send_stack                 :scan, 1
+0035:  send_stack                 :size, 0
+0038:  set_local                  0
+0040:  pop                        
+0041:  push_const_fast            :Fiber
+0043:  push_local_depth           1, 0
+0046:  allow_private              
+0047:  meta_to_s                  :to_s
+0049:  push_literal               " "
+0051:  push_local                 0
+0053:  allow_private              
+0054:  meta_to_s                  :to_s
+0056:  string_build               3
+0058:  send_stack                 :yield, 1
+0061:  ret                        
+----------------------------------------

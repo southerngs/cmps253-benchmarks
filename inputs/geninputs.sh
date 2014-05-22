@@ -2,7 +2,7 @@
 
 make
 
-count=("250000" "2500000" "25000000")
+count=("50000" "500000" "5000000" "250000" "2500000" "25000000")
 for i in ${count[@]}
 do
   echo "Generting sequence for ${i} elements"

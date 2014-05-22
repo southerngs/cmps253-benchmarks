@@ -5,6 +5,13 @@
 # optimized & parallelized by Rick Branson
 # optimized for ruby2 by Aaron Tavistock
 
+if(ARGV.size != 1)
+  puts "Usage: rbx regexdna.rb <logfile> < <input_file>"
+  exit(1)
+end
+
+logfile = File.new(ARGV[0].to_s, "w")
+
 require 'fiber'
 
 seq = $stdin.read.force_encoding("ASCII-8BIT")
@@ -47,4 +54,4 @@ replacements = {
 }
 seq.gsub!(Regexp.new(replacements.keys.join('|')), replacements)
 
-puts "#{results.join("\n")}\n\n#{origin_len}\n#{clean_len}\n#{seq.size}"
+logfile.puts "#{results.join("\n")}\n\n#{origin_len}\n#{clean_len}\n#{seq.size}"
