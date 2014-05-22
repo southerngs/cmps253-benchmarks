@@ -1,0 +1,356 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      3: n, sum, flips
+Stack size:  8
+Literals:    9: :fannkuch, <compiled code>, :method_visibility, :add_defn_method, :ARGV, :[], :to_i, "%d\nPfannkuchen(%d) = %d\n", :printf
+Lines to IP: 6: 0..13, 56: 14..30, 57: 31..49, 58: 50..66
+
+0000:  push_rubinius              
+0001:  push_literal               :fannkuch
+0003:  push_literal               #<Rubinius::CompiledCode fannkuch file=../fannkuchredux.rb>
+0005:  push_scope                 
+0006:  push_variables             
+0007:  send_stack                 :method_visibility, 0
+0010:  send_stack                 :add_defn_method, 4
+0013:  pop                        
+0014:  push_const_fast            :ARGV
+0016:  meta_push_0                
+0017:  send_stack                 :[], 1
+0020:  dup_top                    
+0021:  goto_if_true               0025:
+0023:  pop                        
+0024:  meta_push_1                
+0025:  send_stack                 :to_i, 0
+0028:  set_local                  0    # n
+0030:  pop                        
+0031:  push_self                  
+0032:  push_local                 0    # n
+0034:  allow_private              
+0035:  send_stack                 :fannkuch, 1
+0038:  cast_multi_value           
+0039:  dup_top                    
+0040:  shift_array                
+0041:  set_local                  1    # sum
+0043:  pop                        
+0044:  shift_array                
+0045:  set_local                  2    # flips
+0047:  pop                        
+0048:  pop                        
+0049:  pop                        
+0050:  push_self                  
+0051:  push_literal               "%d\nPfannkuchen(%d) = %d\n"
+0053:  string_dup                 
+0054:  push_local                 1    # sum
+0056:  push_local                 0    # n
+0058:  push_local                 2    # flips
+0060:  allow_private              
+0061:  send_stack                 :printf, 4
+0064:  pop                        
+0065:  push_true                  
+0066:  ret                        
+----------------------------------------
+
+============== :fannkuch ===============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      13: n, p, s, q, sign, sum, maxflips, q1, flips, qq, i, j, t
+Stack size:  18
+Literals:    18: :Range, :allocate, :initialize, :to_a, :dup, :[], :!=, :[]=, :==, :>=, :-, :<, :+, :*, :>, :<=, :delete_at, :insert
+Line:        6
+Lines to IP: 7: 0..21, 8: 22..29, 9: 30..37, 10: 38..41, 11: 42..47, 12: 48..50, 14: 51..64, 15: 65..91, 16: 92..95, 17: 96..110, 18: 111..124, 19: 125..133, 20: 134..155, 21: 156..164, 22: 165..207, 23: 208..216, 24: 217..228, 0: 229..231, 19: 232..232, 0: 233..233, 27: 234..238, 28: 239..250, 0: 251..252, 30: 253..267, 31: 268..283, 0: 284..285, 14: 286..286, 0: 287..287, 34: 288..295, 36: 296..334, 37: 335..339, 40: 340..380, 41: 381..384, 42: 385..389, 43: 390..413, 44: 414..432, 0: 433..433, 45: 434..447, 47: 448..456, 48: 457..465, 49: 466..478, 0: 479..480, 51: 481..512, 0: 513..518
+
+0000:  push_cpath_top             
+0001:  find_const_fast            :Range
+0003:  allow_private              
+0004:  send_stack                 :allocate, 0
+0007:  dup_top                    
+0008:  meta_push_0                
+0009:  push_local                 0    # n
+0011:  allow_private              
+0012:  send_stack                 :initialize, 2
+0015:  pop                        
+0016:  send_stack                 :to_a, 0
+0019:  set_local                  1    # p
+0021:  pop                        
+0022:  push_local                 1    # p
+0024:  send_stack                 :dup, 0
+0027:  set_local                  2    # s
+0029:  pop                        
+0030:  push_local                 1    # p
+0032:  send_stack                 :dup, 0
+0035:  set_local                  3    # q
+0037:  pop                        
+0038:  meta_push_1                
+0039:  set_local                  4    # sign
+0041:  pop                        
+0042:  meta_push_0                
+0043:  set_local                  6    # maxflips
+0045:  set_local                  5    # sum
+0047:  pop                        
+0048:  push_true                  
+0049:  goto_if_false              0517:
+0051:  push_local                 1    # p
+0053:  meta_push_1                
+0054:  send_stack                 :[], 1
+0057:  set_local                  7    # q1
+0059:  meta_push_1                
+0060:  send_stack                 :!=, 1
+0063:  goto_if_false              0286:
+0065:  push_local                 3    # q
+0067:  push_cpath_top             
+0068:  find_const_fast            :Range
+0070:  allow_private              
+0071:  send_stack                 :allocate, 0
+0074:  dup_top                    
+0075:  meta_push_0                
+0076:  meta_push_neg_1            
+0077:  allow_private              
+0078:  send_stack                 :initialize, 2
+0081:  pop                        
+0082:  push_local                 1    # p
+0084:  dup_top                    
+0085:  move_down                  3
+0087:  send_stack                 :[]=, 2
+0090:  pop                        
+0091:  pop                        
+0092:  meta_push_1                
+0093:  set_local                  8    # flips
+0095:  pop                        
+0096:  push_local                 3    # q
+0098:  push_local                 7    # q1
+0100:  send_stack                 :[], 1
+0103:  set_local                  9    # qq
+0105:  meta_push_1                
+0106:  send_stack                 :==, 1
+0109:  goto_if_true               0251:
+0111:  push_local                 3    # q
+0113:  push_local                 7    # q1
+0115:  push_local                 7    # q1
+0117:  dup_top                    
+0118:  move_down                  3
+0120:  send_stack                 :[]=, 2
+0123:  pop                        
+0124:  pop                        
+0125:  push_local                 7    # q1
+0127:  push_int                   4
+0129:  send_stack                 :>=, 1
+0132:  goto_if_false              0232:
+0134:  meta_push_2                
+0135:  push_local                 7    # q1
+0137:  meta_push_1                
+0138:  send_stack                 :-, 1
+0141:  dup_many                   2
+0143:  make_array                 2
+0145:  move_down                  2
+0147:  rotate                     2
+0149:  set_local                  10    # i
+0151:  pop                        
+0152:  set_local                  11    # j
+0154:  pop                        
+0155:  pop                        
+0156:  push_local                 10    # i
+0158:  push_local                 11    # j
+0160:  send_stack                 :<, 1
+0163:  goto_if_false              0229:
+0165:  push_local                 3    # q
+0167:  push_local                 11    # j
+0169:  send_stack                 :[], 1
+0172:  push_local                 3    # q
+0174:  push_local                 10    # i
+0176:  send_stack                 :[], 1
+0179:  dup_many                   2
+0181:  make_array                 2
+0183:  move_down                  2
+0185:  rotate                     2
+0187:  push_local                 3    # q
+0189:  swap_stack                 
+0190:  push_local                 10    # i
+0192:  swap_stack                 
+0193:  send_stack                 :[]=, 2
+0196:  pop                        
+0197:  push_local                 3    # q
+0199:  swap_stack                 
+0200:  push_local                 11    # j
+0202:  swap_stack                 
+0203:  send_stack                 :[]=, 2
+0206:  pop                        
+0207:  pop                        
+0208:  push_local                 10    # i
+0210:  meta_push_1                
+0211:  send_stack                 :+, 1
+0214:  set_local                  10    # i
+0216:  pop                        
+0217:  push_local                 11    # j
+0219:  meta_push_1                
+0220:  send_stack                 :-, 1
+0223:  set_local                  11    # j
+0225:  pop                        
+0226:  check_interrupts           
+0227:  goto                       0156:
+0229:  push_nil                   
+0230:  goto                       0233:
+0232:  push_nil                   
+0233:  pop                        
+0234:  push_local                 9    # qq
+0236:  set_local                  7    # q1
+0238:  pop                        
+0239:  push_local                 8    # flips
+0241:  meta_push_1                
+0242:  send_stack                 :+, 1
+0245:  set_local                  8    # flips
+0247:  pop                        
+0248:  check_interrupts           
+0249:  goto                       0096:
+0251:  push_nil                   
+0252:  pop                        
+0253:  push_local                 5    # sum
+0255:  push_local                 4    # sign
+0257:  push_local                 8    # flips
+0259:  send_stack                 :*, 1
+0262:  send_stack                 :+, 1
+0265:  set_local                  5    # sum
+0267:  pop                        
+0268:  push_local                 8    # flips
+0270:  push_local                 6    # maxflips
+0272:  send_stack                 :>, 1
+0275:  goto_if_false              0283:
+0277:  push_local                 8    # flips
+0279:  set_local                  6    # maxflips
+0281:  goto                       0284:
+0283:  push_nil                   
+0284:  goto                       0287:
+0286:  push_nil                   
+0287:  pop                        
+0288:  push_local                 4    # sign
+0290:  meta_push_1                
+0291:  send_stack                 :==, 1
+0294:  goto_if_false              0340:
+0296:  push_local                 1    # p
+0298:  meta_push_2                
+0299:  send_stack                 :[], 1
+0302:  push_local                 1    # p
+0304:  meta_push_1                
+0305:  send_stack                 :[], 1
+0308:  dup_many                   2
+0310:  make_array                 2
+0312:  move_down                  2
+0314:  rotate                     2
+0316:  push_local                 1    # p
+0318:  swap_stack                 
+0319:  meta_push_1                
+0320:  swap_stack                 
+0321:  send_stack                 :[]=, 2
+0324:  pop                        
+0325:  push_local                 1    # p
+0327:  swap_stack                 
+0328:  meta_push_2                
+0329:  swap_stack                 
+0330:  send_stack                 :[]=, 2
+0333:  pop                        
+0334:  pop                        
+0335:  meta_push_neg_1            
+0336:  set_local                  4    # sign
+0338:  goto                       0513:
+0340:  push_local                 1    # p
+0342:  push_int                   3
+0344:  send_stack                 :[], 1
+0347:  push_local                 1    # p
+0349:  meta_push_2                
+0350:  send_stack                 :[], 1
+0353:  dup_many                   2
+0355:  make_array                 2
+0357:  move_down                  2
+0359:  rotate                     2
+0361:  push_local                 1    # p
+0363:  swap_stack                 
+0364:  meta_push_2                
+0365:  swap_stack                 
+0366:  send_stack                 :[]=, 2
+0369:  pop                        
+0370:  push_local                 1    # p
+0372:  swap_stack                 
+0373:  push_int                   3
+0375:  swap_stack                 
+0376:  send_stack                 :[]=, 2
+0379:  pop                        
+0380:  pop                        
+0381:  meta_push_1                
+0382:  set_local                  4    # sign
+0384:  pop                        
+0385:  push_int                   3
+0387:  set_local                  10    # i
+0389:  pop                        
+0390:  push_local                 10    # i
+0392:  push_local                 0    # n
+0394:  send_stack                 :<=, 1
+0397:  dup_top                    
+0398:  goto_if_false              0412:
+0400:  pop                        
+0401:  push_local                 2    # s
+0403:  push_local                 10    # i
+0405:  send_stack                 :[], 1
+0408:  meta_push_1                
+0409:  send_stack                 :==, 1
+0412:  goto_if_false              0479:
+0414:  push_local                 10    # i
+0416:  push_local                 0    # n
+0418:  send_stack                 :==, 1
+0421:  goto_if_false              0432:
+0423:  push_local                 5    # sum
+0425:  push_local                 6    # maxflips
+0427:  make_array                 2
+0429:  ret                        
+0430:  goto                       0433:
+0432:  push_nil                   
+0433:  pop                        
+0434:  push_local                 2    # s
+0436:  push_local                 10    # i
+0438:  push_local                 10    # i
+0440:  dup_top                    
+0441:  move_down                  3
+0443:  send_stack                 :[]=, 2
+0446:  pop                        
+0447:  pop                        
+0448:  push_local                 1    # p
+0450:  meta_push_1                
+0451:  send_stack                 :delete_at, 1
+0454:  set_local                  12    # t
+0456:  pop                        
+0457:  push_local                 10    # i
+0459:  meta_push_1                
+0460:  send_stack                 :+, 1
+0463:  set_local                  10    # i
+0465:  pop                        
+0466:  push_local                 1    # p
+0468:  push_local                 10    # i
+0470:  push_local                 12    # t
+0472:  send_stack                 :insert, 2
+0475:  pop                        
+0476:  check_interrupts           
+0477:  goto                       0390:
+0479:  push_nil                   
+0480:  pop                        
+0481:  push_local                 10    # i
+0483:  push_local                 0    # n
+0485:  send_stack                 :<=, 1
+0488:  goto_if_false              0512:
+0490:  push_local                 2    # s
+0492:  push_local                 10    # i
+0494:  dup_many                   2
+0496:  send_stack                 :[], 1
+0499:  meta_push_1                
+0500:  send_stack                 :-, 1
+0503:  dup_top                    
+0504:  move_down                  3
+0506:  send_stack                 :[]=, 2
+0509:  pop                        
+0510:  goto                       0513:
+0512:  push_nil                   
+0513:  pop                        
+0514:  check_interrupts           
+0515:  goto                       0048:
+0517:  push_nil                   
+0518:  ret                        
+----------------------------------------
