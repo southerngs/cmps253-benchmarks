@@ -1,0 +1,302 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      5: max_depth, min_depth, stretch_depth, stretch_tree, long_lived_tree
+Stack size:  12
+Literals:    18: :item_check, <compiled code>, :method_visibility, :add_defn_method, :bottom_up_tree, <compiled code>, :ARGV, :[], :to_i, :+, :>, "stretch tree of depth ", :to_s, "\t check: ", :puts, <compiled code>, :step, "long lived tree of depth "
+Lines to IP: 8: 0..13, 13: 14..27, 20: 28..39, 21: 40..44, 23: 45..68, 0: 69..69, 25: 70..78, 26: 79..89, 28: 90..118, 29: 119..122, 31: 123..133, 33: 134..148, 49: 149..179
+
+0000:  push_rubinius              
+0001:  push_literal               :item_check
+0003:  push_literal               #<Rubinius::CompiledCode item_check file=binarytrees.rb>
+0005:  push_scope                 
+0006:  push_variables             
+0007:  send_stack                 :method_visibility, 0
+0010:  send_stack                 :add_defn_method, 4
+0013:  pop                        
+0014:  push_rubinius              
+0015:  push_literal               :bottom_up_tree
+0017:  push_literal               #<Rubinius::CompiledCode bottom_up_tree file=binarytrees.rb>
+0019:  push_scope                 
+0020:  push_variables             
+0021:  send_stack                 :method_visibility, 0
+0024:  send_stack                 :add_defn_method, 4
+0027:  pop                        
+0028:  push_const_fast            :ARGV
+0030:  meta_push_0                
+0031:  send_stack                 :[], 1
+0034:  send_stack                 :to_i, 0
+0037:  set_local                  0    # max_depth
+0039:  pop                        
+0040:  push_int                   4
+0042:  set_local                  1    # min_depth
+0044:  pop                        
+0045:  push_local                 1    # min_depth
+0047:  meta_push_2                
+0048:  send_stack                 :+, 1
+0051:  push_local                 0    # max_depth
+0053:  send_stack                 :>, 1
+0056:  goto_if_false              0068:
+0058:  push_local                 1    # min_depth
+0060:  meta_push_2                
+0061:  send_stack                 :+, 1
+0064:  set_local                  0    # max_depth
+0066:  goto                       0069:
+0068:  push_nil                   
+0069:  pop                        
+0070:  push_local                 0    # max_depth
+0072:  meta_push_1                
+0073:  send_stack                 :+, 1
+0076:  set_local                  2    # stretch_depth
+0078:  pop                        
+0079:  push_self                  
+0080:  meta_push_0                
+0081:  push_local                 2    # stretch_depth
+0083:  allow_private              
+0084:  send_stack                 :bottom_up_tree, 2
+0087:  set_local                  3    # stretch_tree
+0089:  pop                        
+0090:  push_self                  
+0091:  push_literal               "stretch tree of depth "
+0093:  push_local                 2    # stretch_depth
+0095:  allow_private              
+0096:  meta_to_s                  :to_s
+0098:  push_literal               "\t check: "
+0100:  push_self                  
+0101:  push_local                 3    # stretch_tree
+0103:  cast_array                 
+0104:  push_nil                   
+0105:  allow_private              
+0106:  send_stack_with_splat      :item_check, 0
+0109:  allow_private              
+0110:  meta_to_s                  :to_s
+0112:  string_build               4
+0114:  allow_private              
+0115:  send_stack                 :puts, 1
+0118:  pop                        
+0119:  push_nil                   
+0120:  set_local                  3    # stretch_tree
+0122:  pop                        
+0123:  push_self                  
+0124:  meta_push_0                
+0125:  push_local                 0    # max_depth
+0127:  allow_private              
+0128:  send_stack                 :bottom_up_tree, 2
+0131:  set_local                  4    # long_lived_tree
+0133:  pop                        
+0134:  push_local                 1    # min_depth
+0136:  push_local                 0    # max_depth
+0138:  meta_push_1                
+0139:  send_stack                 :+, 1
+0142:  meta_push_2                
+0143:  create_block               #<Rubinius::CompiledCode __block__ file=binarytrees.rb>
+0145:  send_stack_with_block      :step, 2
+0148:  pop                        
+0149:  push_self                  
+0150:  push_literal               "long lived tree of depth "
+0152:  push_local                 0    # max_depth
+0154:  allow_private              
+0155:  meta_to_s                  :to_s
+0157:  push_literal               "\t check: "
+0159:  push_self                  
+0160:  push_local                 4    # long_lived_tree
+0162:  cast_array                 
+0163:  push_nil                   
+0164:  allow_private              
+0165:  send_stack_with_splat      :item_check, 0
+0168:  allow_private              
+0169:  meta_to_s                  :to_s
+0171:  string_build               4
+0173:  allow_private              
+0174:  send_stack                 :puts, 1
+0177:  pop                        
+0178:  push_true                  
+0179:  ret                        
+----------------------------------------
+
+============= :item_check ==============
+Arguments:   3 required, 0 post, 3 total
+Arity:       3
+Locals:      3: left, item, right
+Stack size:  7
+Literals:    4: :nil?, :item_check, :+, :-
+Line:        8
+Lines to IP: 9: 0..12, 0: 13..13, 10: 14..40
+
+0000:  push_local                 0    # left
+0002:  send_stack                 :nil?, 0
+0005:  goto_if_false              0012:
+0007:  push_local                 1    # item
+0009:  ret                        
+0010:  goto                       0013:
+0012:  push_nil                   
+0013:  pop                        
+0014:  push_local                 1    # item
+0016:  push_self                  
+0017:  push_local                 0    # left
+0019:  cast_array                 
+0020:  push_nil                   
+0021:  allow_private              
+0022:  send_stack_with_splat      :item_check, 0
+0025:  send_stack                 :+, 1
+0028:  push_self                  
+0029:  push_local                 2    # right
+0031:  cast_array                 
+0032:  push_nil                   
+0033:  allow_private              
+0034:  send_stack_with_splat      :item_check, 0
+0037:  send_stack                 :-, 1
+0040:  ret                        
+----------------------------------------
+
+=========== :bottom_up_tree ============
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      3: item, depth, item_item
+Stack size:  8
+Literals:    4: :>, :*, :-, :bottom_up_tree
+Line:        13
+Lines to IP: 14: 0..17, 0: 18..18, 15: 19..27, 16: 28..36, 17: 37..63
+
+0000:  push_local                 1    # depth
+0002:  meta_push_0                
+0003:  send_stack                 :>, 1
+0006:  goto_if_false              0011:
+0008:  push_nil                   
+0009:  goto                       0018:
+0011:  push_nil                   
+0012:  push_local                 0    # item
+0014:  push_nil                   
+0015:  make_array                 3
+0017:  ret                        
+0018:  pop                        
+0019:  meta_push_2                
+0020:  push_local                 0    # item
+0022:  send_stack                 :*, 1
+0025:  set_local                  2    # item_item
+0027:  pop                        
+0028:  push_local                 1    # depth
+0030:  meta_push_1                
+0031:  send_stack                 :-, 1
+0034:  set_local                  1    # depth
+0036:  pop                        
+0037:  push_self                  
+0038:  push_local                 2    # item_item
+0040:  meta_push_1                
+0041:  send_stack                 :-, 1
+0044:  push_local                 1    # depth
+0046:  allow_private              
+0047:  send_stack                 :bottom_up_tree, 2
+0050:  push_local                 0    # item
+0052:  push_self                  
+0053:  push_local                 2    # item_item
+0055:  push_local                 1    # depth
+0057:  allow_private              
+0058:  send_stack                 :bottom_up_tree, 2
+0061:  make_array                 3
+0063:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      5: depth, iterations, check, i, temp_tree
+Stack size:  12
+Literals:    13: :-, :+, :**, :Range, :allocate, :initialize, <compiled code>, :each, :*, :to_s, "\t trees of depth ", "\t check: ", :puts
+Line:        33
+Lines to IP: 34: 0..20, 36: 21..24, 38: 25..46, 46: 47..77
+
+0000:  meta_push_2                
+0001:  push_local_depth           1, 0
+0004:  push_local                 0
+0006:  send_stack                 :-, 1
+0009:  push_local_depth           1, 1
+0012:  send_stack                 :+, 1
+0015:  send_stack                 :**, 1
+0018:  set_local                  1
+0020:  pop                        
+0021:  meta_push_0                
+0022:  set_local                  2
+0024:  pop                        
+0025:  push_cpath_top             
+0026:  find_const_fast            :Range
+0028:  allow_private              
+0029:  send_stack                 :allocate, 0
+0032:  dup_top                    
+0033:  meta_push_1                
+0034:  push_local                 1
+0036:  allow_private              
+0037:  send_stack                 :initialize, 2
+0040:  pop                        
+0041:  create_block               #<Rubinius::CompiledCode __block__ file=binarytrees.rb>
+0043:  send_stack_with_block      :each, 0
+0046:  pop                        
+0047:  push_self                  
+0048:  push_local                 1
+0050:  meta_push_2                
+0051:  send_stack                 :*, 1
+0054:  allow_private              
+0055:  meta_to_s                  :to_s
+0057:  push_literal               "\t trees of depth "
+0059:  push_local                 0
+0061:  allow_private              
+0062:  meta_to_s                  :to_s
+0064:  push_literal               "\t check: "
+0066:  push_local                 2
+0068:  allow_private              
+0069:  meta_to_s                  :to_s
+0071:  string_build               5
+0073:  allow_private              
+0074:  send_stack                 :puts, 1
+0077:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: $for_args
+Stack size:  6
+Literals:    4: :bottom_up_tree, :item_check, :+, :-@
+Line:        38
+Lines to IP: 39: 6..20, 40: 21..40, 42: 41..58, 43: 59..78
+
+0000:  push_local                 0
+0002:  set_local_depth            1, 3
+0005:  pop                        
+0006:  push_self                  
+0007:  push_local_depth           1, 3
+0010:  push_local_depth           1, 0
+0013:  allow_private              
+0014:  send_stack                 :bottom_up_tree, 2
+0017:  set_local_depth            1, 4
+0020:  pop                        
+0021:  push_local_depth           1, 2
+0024:  push_self                  
+0025:  push_local_depth           1, 4
+0028:  cast_array                 
+0029:  push_nil                   
+0030:  allow_private              
+0031:  send_stack_with_splat      :item_check, 0
+0034:  send_stack                 :+, 1
+0037:  set_local_depth            1, 2
+0040:  pop                        
+0041:  push_self                  
+0042:  push_local_depth           1, 3
+0045:  send_stack                 :-@, 0
+0048:  push_local_depth           1, 0
+0051:  allow_private              
+0052:  send_stack                 :bottom_up_tree, 2
+0055:  set_local_depth            1, 4
+0058:  pop                        
+0059:  push_local_depth           1, 2
+0062:  push_self                  
+0063:  push_local_depth           1, 4
+0066:  cast_array                 
+0067:  push_nil                   
+0068:  allow_private              
+0069:  send_stack_with_splat      :item_check, 0
+0072:  send_stack                 :+, 1
+0075:  set_local_depth            1, 2
+0078:  ret                        
+----------------------------------------
