@@ -1,0 +1,179 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      1: seq
+Stack size:  7
+Literals:    24: :ARGV, :size, :!=, "Usage: rbx revcomp.rb <logfile> < <input_file>", :puts, :exit, :Globals, :$logfile, :File, :new, :allocate, :[], :to_s, "w", :initialize, :[]=, "", :revcomp, <compiled code>, :method_visibility, :add_defn_method, :STDIN, <compiled code>, :each
+Lines to IP: 8: 0..10, 9: 11..19, 10: 20..27, 8: 28..28, 0: 29..29, 13: 30..85, 15: 86..91, 17: 92..105, 23: 106..113, 35: 114..123
+
+0000:  push_const_fast            :ARGV
+0002:  send_stack                 :size, 0
+0005:  meta_push_1                
+0006:  send_stack                 :!=, 1
+0009:  goto_if_false              0028:
+0011:  push_self                  
+0012:  push_literal               "Usage: rbx revcomp.rb <logfile> < <input_file>"
+0014:  string_dup                 
+0015:  allow_private              
+0016:  send_stack                 :puts, 1
+0019:  pop                        
+0020:  push_self                  
+0021:  meta_push_1                
+0022:  allow_private              
+0023:  send_stack                 :exit, 1
+0026:  goto                       0029:
+0028:  push_nil                   
+0029:  pop                        
+0030:  push_rubinius              
+0031:  find_const_fast            :Globals
+0033:  push_literal               :$logfile
+0035:  push_const_fast            :File
+0037:  dup_top                    
+0038:  check_serial               :new, 47
+0041:  goto_if_false              0067:
+0043:  allow_private              
+0044:  send_stack                 :allocate, 0
+0047:  dup_top                    
+0048:  push_const_fast            :ARGV
+0050:  meta_push_0                
+0051:  send_stack                 :[], 1
+0054:  send_stack                 :to_s, 0
+0057:  push_literal               "w"
+0059:  string_dup                 
+0060:  allow_private              
+0061:  send_stack                 :initialize, 2
+0064:  pop                        
+0065:  goto                       0082:
+0067:  push_const_fast            :ARGV
+0069:  meta_push_0                
+0070:  send_stack                 :[], 1
+0073:  send_stack                 :to_s, 0
+0076:  push_literal               "w"
+0078:  string_dup                 
+0079:  send_stack                 :new, 2
+0082:  send_stack                 :[]=, 2
+0085:  pop                        
+0086:  push_literal               ""
+0088:  string_dup                 
+0089:  set_local                  0    # seq
+0091:  pop                        
+0092:  push_rubinius              
+0093:  push_literal               :revcomp
+0095:  push_literal               #<Rubinius::CompiledCode revcomp file=../revcomp.rb>
+0097:  push_scope                 
+0098:  push_variables             
+0099:  send_stack                 :method_visibility, 0
+0102:  send_stack                 :add_defn_method, 4
+0105:  pop                        
+0106:  push_const_fast            :STDIN
+0108:  create_block               #<Rubinius::CompiledCode __block__ file=../revcomp.rb>
+0110:  send_stack_with_block      :each, 0
+0113:  pop                        
+0114:  push_self                  
+0115:  push_local                 0    # seq
+0117:  allow_private              
+0118:  send_stack                 :revcomp, 1
+0121:  pop                        
+0122:  push_true                  
+0123:  ret                        
+----------------------------------------
+
+=============== :revcomp ===============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      2: seq, stringlen
+Stack size:  6
+Literals:    8: :reverse!, "wsatugcyrkmbdhvnATUGCYRKMBDHVN", "WSTAACGRYMKVHDBNTAACGRYMKVHDBN", :tr!, :length, :-, <compiled code>, :step
+Line:        17
+Lines to IP: 18: 0..14, 19: 15..26, 20: 27..37
+
+0000:  push_local                 0    # seq
+0002:  send_stack                 :reverse!, 0
+0005:  push_literal               "wsatugcyrkmbdhvnATUGCYRKMBDHVN"
+0007:  string_dup                 
+0008:  push_literal               "WSTAACGRYMKVHDBNTAACGRYMKVHDBN"
+0010:  string_dup                 
+0011:  send_stack                 :tr!, 2
+0014:  pop                        
+0015:  push_local                 0    # seq
+0017:  send_stack                 :length, 0
+0020:  meta_push_1                
+0021:  send_stack                 :-, 1
+0024:  set_local                  1    # stringlen
+0026:  pop                        
+0027:  meta_push_0                
+0028:  push_local                 1    # stringlen
+0030:  push_int                   60
+0032:  create_block               #<Rubinius::CompiledCode revcomp file=../revcomp.rb>
+0034:  send_stack_with_block      :step, 2
+0037:  ret                        
+----------------------------------------
+
+=============== :revcomp ===============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: x
+Stack size:  6
+Literals:    5: :Globals, :$logfile, :[], "\n", :print
+Line:        20
+Lines to IP: 
+
+0000:  push_rubinius              
+0001:  find_const_fast            :Globals
+0003:  push_literal               :$logfile
+0005:  send_stack                 :[], 1
+0008:  push_local_depth           1, 0
+0011:  push_local                 0
+0013:  push_int                   60
+0015:  send_stack                 :[], 2
+0018:  push_literal               "\n"
+0020:  string_dup                 
+0021:  send_stack                 :print, 2
+0024:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: line
+Stack size:  4
+Literals:    12: ">", :include?, :empty?, :!, :revcomp, "", :Globals, :$logfile, :[], :puts, :chomp!, :<<
+Line:        23
+Lines to IP: 24: 0..9, 25: 10..20, 26: 21..29, 27: 30..37, 25: 38..38, 0: 39..39, 29: 40..54, 31: 55..60, 32: 61..68, 0: 69..69
+
+0000:  push_local                 0
+0002:  push_literal               ">"
+0004:  string_dup                 
+0005:  send_stack                 :include?, 1
+0008:  goto_if_false              0055:
+0010:  push_local_depth           1, 0
+0013:  send_stack                 :empty?, 0
+0016:  send_stack                 :!, 0
+0019:  goto_if_false              0038:
+0021:  push_self                  
+0022:  push_local_depth           1, 0
+0025:  allow_private              
+0026:  send_stack                 :revcomp, 1
+0029:  pop                        
+0030:  push_literal               ""
+0032:  string_dup                 
+0033:  set_local_depth            1, 0
+0036:  goto                       0039:
+0038:  push_nil                   
+0039:  pop                        
+0040:  push_rubinius              
+0041:  find_const_fast            :Globals
+0043:  push_literal               :$logfile
+0045:  send_stack                 :[], 1
+0048:  push_local                 0
+0050:  send_stack                 :puts, 1
+0053:  goto                       0069:
+0055:  push_local                 0
+0057:  send_stack                 :chomp!, 0
+0060:  pop                        
+0061:  push_local_depth           1, 0
+0064:  push_local                 0
+0066:  send_stack                 :<<, 1
+0069:  ret                        
+----------------------------------------
