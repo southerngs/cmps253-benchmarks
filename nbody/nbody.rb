@@ -124,11 +124,17 @@ BODIES = [
 ]
 
 
-n = Integer(ARGV[0])
+if(ARGV.size != 2) then
+  puts "Usage rbx nbody.rb <logfile> <size>"
+  exit(1)
+end
+
+logfile = File.new(ARGV[0].to_s,"w")
+n = Integer(ARGV[1])
 
 offset_momentum(BODIES)
 
-puts "%.9f" % energy(BODIES)
+logfile.puts "%.9f" % energy(BODIES)
 
 nbodies = BODIES.size
 dt = 0.01
@@ -142,4 +148,4 @@ n.times do
   end
 end
 
-puts "%.9f" % energy(BODIES)
+logfile.puts "%.9f" % energy(BODIES)

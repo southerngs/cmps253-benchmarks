@@ -1,0 +1,839 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      4: logfile, n, nbodies, dt
+Stack size:  19
+Literals:    108: :SOLAR_MASS, :Math, :PI, :**, :*, :const_set, :DAYS_PER_YEAR, 365.24, :Planet, :open_class, <compiled code>, :call_under, :energy, <compiled code>, :method_visibility, :add_defn_method, :offset_momentum, <compiled code>, :BODIES, :new, :allocate, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, :initialize, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 4.841431442464721, -1.1603200440274284, -0.10362204447112311, 0.001660076642744037, 0.007699011184197404, -6.90460016972063e-05, 0.0009547919384243266, 4.841431442464721, -1.1603200440274284, -0.10362204447112311, 0.001660076642744037, 0.007699011184197404, -6.90460016972063e-05, 0.0009547919384243266, 8.34336671824458, 4.124798564124305, -0.4035234171143214, -0.002767425107268624, 0.004998528012349172, 2.3041729757376393e-05, 0.0002858859806661308, 8.34336671824458, 4.124798564124305, -0.4035234171143214, -0.002767425107268624, 0.004998528012349172, 2.3041729757376393e-05, 0.0002858859806661308, 12.894369562139131, -15.111151401698631, -0.22330757889265573, 0.002964601375647616, 0.0023784717395948095, -2.9658956854023756e-05, 4.366244043351563e-05, 12.894369562139131, -15.111151401698631, -0.22330757889265573, 0.002964601375647616, 0.0023784717395948095, -2.9658956854023756e-05, 4.366244043351563e-05, 15.379697114850917, -25.919314609987964, 0.17925877295037118, 0.0026806777249038932, 0.001628241700382423, -9.515922545197159e-05, 5.1513890204661145e-05, 15.379697114850917, -25.919314609987964, 0.17925877295037118, 0.0026806777249038932, 0.001628241700382423, -9.515922545197159e-05, 5.1513890204661145e-05, :ARGV, :size, :!=, "Usage rbx nbody.rb <logfile> <size>", :puts, :exit, :File, :[], :to_s, "w", :Integer, "%.9f", :%, 0.01, <compiled code>, :times
+Lines to IP: 8: 0..19, 9: 20..28, 11: 29..45, 46: 46..59, 65: 60..73, 81: 74..76, 83: 77..127, 86: 128..140, 87: 141..142, 88: 143..144, 89: 145..146, 90: 147..148, 91: 149..150, 92: 151..152, 93: 153..161, 87: 162..163, 88: 164..165, 89: 166..167, 90: 168..169, 91: 170..171, 92: 172..173, 93: 174..178, 96: 179..191, 97: 192..193, 98: 194..195, 99: 196..197, 100: 198..199, 101: 200..201, 102: 202..203, 103: 204..212, 97: 213..214, 98: 215..216, 99: 217..218, 100: 219..220, 101: 221..222, 102: 223..224, 103: 225..229, 106: 230..242, 107: 243..244, 108: 245..246, 109: 247..248, 110: 249..250, 111: 251..252, 112: 253..254, 113: 255..263, 107: 264..265, 108: 266..267, 109: 268..269, 110: 270..271, 111: 272..273, 112: 274..275, 113: 276..280, 116: 281..293, 117: 294..295, 118: 296..297, 119: 298..299, 120: 300..301, 121: 302..303, 122: 304..305, 123: 306..314, 117: 315..316, 118: 317..318, 119: 319..320, 120: 321..322, 121: 323..324, 122: 325..326, 123: 327..337, 127: 338..348, 128: 349..357, 129: 358..365, 127: 366..366, 0: 367..367, 132: 368..417, 133: 418..431, 135: 432..439, 137: 440..458, 139: 459..466, 140: 467..471, 142: 472..479, 151: 480..500
+
+0000:  push_scope                 
+0001:  push_literal               :SOLAR_MASS
+0003:  push_int                   4
+0005:  push_const_fast            :Math
+0007:  find_const_fast            :PI
+0009:  meta_push_2                
+0010:  send_stack                 :**, 1
+0013:  send_stack                 :*, 1
+0016:  send_stack                 :const_set, 2
+0019:  pop                        
+0020:  push_scope                 
+0021:  push_literal               :DAYS_PER_YEAR
+0023:  push_literal               365.24
+0025:  send_stack                 :const_set, 2
+0028:  pop                        
+0029:  push_rubinius              
+0030:  push_literal               :Planet
+0032:  push_nil                   
+0033:  push_scope                 
+0034:  send_stack                 :open_class, 3
+0037:  create_block               #<Rubinius::CompiledCode Planet file=../nbody.rb>
+0039:  swap_stack                 
+0040:  push_scope                 
+0041:  push_true                  
+0042:  send_stack                 :call_under, 3
+0045:  pop                        
+0046:  push_rubinius              
+0047:  push_literal               :energy
+0049:  push_literal               #<Rubinius::CompiledCode energy file=../nbody.rb>
+0051:  push_scope                 
+0052:  push_variables             
+0053:  send_stack                 :method_visibility, 0
+0056:  send_stack                 :add_defn_method, 4
+0059:  pop                        
+0060:  push_rubinius              
+0061:  push_literal               :offset_momentum
+0063:  push_literal               #<Rubinius::CompiledCode offset_momentum file=../nbody.rb>
+0065:  push_scope                 
+0066:  push_variables             
+0067:  send_stack                 :method_visibility, 0
+0070:  send_stack                 :add_defn_method, 4
+0073:  pop                        
+0074:  push_scope                 
+0075:  push_literal               :BODIES
+0077:  push_const_fast            :Planet
+0079:  dup_top                    
+0080:  check_serial               :new, 47
+0083:  goto_if_false              0111:
+0085:  allow_private              
+0086:  send_stack                 :allocate, 0
+0089:  dup_top                    
+0090:  push_literal               0.0
+0092:  push_literal               0.0
+0094:  push_literal               0.0
+0096:  push_literal               0.0
+0098:  push_literal               0.0
+0100:  push_literal               0.0
+0102:  push_literal               1.0
+0104:  allow_private              
+0105:  send_stack                 :initialize, 7
+0108:  pop                        
+0109:  goto                       0128:
+0111:  push_literal               0.0
+0113:  push_literal               0.0
+0115:  push_literal               0.0
+0117:  push_literal               0.0
+0119:  push_literal               0.0
+0121:  push_literal               0.0
+0123:  push_literal               1.0
+0125:  send_stack                 :new, 7
+0128:  push_const_fast            :Planet
+0130:  dup_top                    
+0131:  check_serial               :new, 47
+0134:  goto_if_false              0162:
+0136:  allow_private              
+0137:  send_stack                 :allocate, 0
+0140:  dup_top                    
+0141:  push_literal               4.841431442464721
+0143:  push_literal               -1.1603200440274284
+0145:  push_literal               -0.10362204447112311
+0147:  push_literal               0.001660076642744037
+0149:  push_literal               0.007699011184197404
+0151:  push_literal               -6.90460016972063e-05
+0153:  push_literal               0.0009547919384243266
+0155:  allow_private              
+0156:  send_stack                 :initialize, 7
+0159:  pop                        
+0160:  goto                       0179:
+0162:  push_literal               4.841431442464721
+0164:  push_literal               -1.1603200440274284
+0166:  push_literal               -0.10362204447112311
+0168:  push_literal               0.001660076642744037
+0170:  push_literal               0.007699011184197404
+0172:  push_literal               -6.90460016972063e-05
+0174:  push_literal               0.0009547919384243266
+0176:  send_stack                 :new, 7
+0179:  push_const_fast            :Planet
+0181:  dup_top                    
+0182:  check_serial               :new, 47
+0185:  goto_if_false              0213:
+0187:  allow_private              
+0188:  send_stack                 :allocate, 0
+0191:  dup_top                    
+0192:  push_literal               8.34336671824458
+0194:  push_literal               4.124798564124305
+0196:  push_literal               -0.4035234171143214
+0198:  push_literal               -0.002767425107268624
+0200:  push_literal               0.004998528012349172
+0202:  push_literal               2.3041729757376393e-05
+0204:  push_literal               0.0002858859806661308
+0206:  allow_private              
+0207:  send_stack                 :initialize, 7
+0210:  pop                        
+0211:  goto                       0230:
+0213:  push_literal               8.34336671824458
+0215:  push_literal               4.124798564124305
+0217:  push_literal               -0.4035234171143214
+0219:  push_literal               -0.002767425107268624
+0221:  push_literal               0.004998528012349172
+0223:  push_literal               2.3041729757376393e-05
+0225:  push_literal               0.0002858859806661308
+0227:  send_stack                 :new, 7
+0230:  push_const_fast            :Planet
+0232:  dup_top                    
+0233:  check_serial               :new, 47
+0236:  goto_if_false              0264:
+0238:  allow_private              
+0239:  send_stack                 :allocate, 0
+0242:  dup_top                    
+0243:  push_literal               12.894369562139131
+0245:  push_literal               -15.111151401698631
+0247:  push_literal               -0.22330757889265573
+0249:  push_literal               0.002964601375647616
+0251:  push_literal               0.0023784717395948095
+0253:  push_literal               -2.9658956854023756e-05
+0255:  push_literal               4.366244043351563e-05
+0257:  allow_private              
+0258:  send_stack                 :initialize, 7
+0261:  pop                        
+0262:  goto                       0281:
+0264:  push_literal               12.894369562139131
+0266:  push_literal               -15.111151401698631
+0268:  push_literal               -0.22330757889265573
+0270:  push_literal               0.002964601375647616
+0272:  push_literal               0.0023784717395948095
+0274:  push_literal               -2.9658956854023756e-05
+0276:  push_literal               4.366244043351563e-05
+0278:  send_stack                 :new, 7
+0281:  push_const_fast            :Planet
+0283:  dup_top                    
+0284:  check_serial               :new, 47
+0287:  goto_if_false              0315:
+0289:  allow_private              
+0290:  send_stack                 :allocate, 0
+0293:  dup_top                    
+0294:  push_literal               15.379697114850917
+0296:  push_literal               -25.919314609987964
+0298:  push_literal               0.17925877295037118
+0300:  push_literal               0.0026806777249038932
+0302:  push_literal               0.001628241700382423
+0304:  push_literal               -9.515922545197159e-05
+0306:  push_literal               5.1513890204661145e-05
+0308:  allow_private              
+0309:  send_stack                 :initialize, 7
+0312:  pop                        
+0313:  goto                       0332:
+0315:  push_literal               15.379697114850917
+0317:  push_literal               -25.919314609987964
+0319:  push_literal               0.17925877295037118
+0321:  push_literal               0.0026806777249038932
+0323:  push_literal               0.001628241700382423
+0325:  push_literal               -9.515922545197159e-05
+0327:  push_literal               5.1513890204661145e-05
+0329:  send_stack                 :new, 7
+0332:  make_array                 5
+0334:  send_stack                 :const_set, 2
+0337:  pop                        
+0338:  push_const_fast            :ARGV
+0340:  send_stack                 :size, 0
+0343:  meta_push_2                
+0344:  send_stack                 :!=, 1
+0347:  goto_if_false              0366:
+0349:  push_self                  
+0350:  push_literal               "Usage rbx nbody.rb <logfile> <size>"
+0352:  string_dup                 
+0353:  allow_private              
+0354:  send_stack                 :puts, 1
+0357:  pop                        
+0358:  push_self                  
+0359:  meta_push_1                
+0360:  allow_private              
+0361:  send_stack                 :exit, 1
+0364:  goto                       0367:
+0366:  push_nil                   
+0367:  pop                        
+0368:  push_const_fast            :File
+0370:  dup_top                    
+0371:  check_serial               :new, 47
+0374:  goto_if_false              0400:
+0376:  allow_private              
+0377:  send_stack                 :allocate, 0
+0380:  dup_top                    
+0381:  push_const_fast            :ARGV
+0383:  meta_push_0                
+0384:  send_stack                 :[], 1
+0387:  send_stack                 :to_s, 0
+0390:  push_literal               "w"
+0392:  string_dup                 
+0393:  allow_private              
+0394:  send_stack                 :initialize, 2
+0397:  pop                        
+0398:  goto                       0415:
+0400:  push_const_fast            :ARGV
+0402:  meta_push_0                
+0403:  send_stack                 :[], 1
+0406:  send_stack                 :to_s, 0
+0409:  push_literal               "w"
+0411:  string_dup                 
+0412:  send_stack                 :new, 2
+0415:  set_local                  0    # logfile
+0417:  pop                        
+0418:  push_self                  
+0419:  push_const_fast            :ARGV
+0421:  meta_push_1                
+0422:  send_stack                 :[], 1
+0425:  allow_private              
+0426:  send_stack                 :Integer, 1
+0429:  set_local                  1    # n
+0431:  pop                        
+0432:  push_self                  
+0433:  push_const_fast            :BODIES
+0435:  allow_private              
+0436:  send_stack                 :offset_momentum, 1
+0439:  pop                        
+0440:  push_local                 0    # logfile
+0442:  push_literal               "%.9f"
+0444:  string_dup                 
+0445:  push_self                  
+0446:  push_const_fast            :BODIES
+0448:  allow_private              
+0449:  send_stack                 :energy, 1
+0452:  send_stack                 :%, 1
+0455:  send_stack                 :puts, 1
+0458:  pop                        
+0459:  push_const_fast            :BODIES
+0461:  send_stack                 :size, 0
+0464:  set_local                  2    # nbodies
+0466:  pop                        
+0467:  push_literal               0.01
+0469:  set_local                  3    # dt
+0471:  pop                        
+0472:  push_local                 1    # n
+0474:  create_block               #<Rubinius::CompiledCode __block__ file=../nbody.rb>
+0476:  send_stack_with_block      :times, 0
+0479:  pop                        
+0480:  push_local                 0    # logfile
+0482:  push_literal               "%.9f"
+0484:  string_dup                 
+0485:  push_self                  
+0486:  push_const_fast            :BODIES
+0488:  allow_private              
+0489:  send_stack                 :energy, 1
+0492:  send_stack                 :%, 1
+0495:  send_stack                 :puts, 1
+0498:  pop                        
+0499:  push_true                  
+0500:  ret                        
+----------------------------------------
+
+=============== :Planet ================
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      0
+Stack size:  8
+Literals:    14: :x, :y, :z, :vx, :vy, :vz, :mass, :attr_accessor, :initialize, <compiled code>, :method_visibility, :add_defn_method, :move_from_i, <compiled code>
+Lines to IP: 12: 2..21, 14: 22..35, 20: 36..49
+
+0000:  push_self                  
+0001:  add_scope                  
+0002:  push_self                  
+0003:  push_literal               :x
+0005:  push_literal               :y
+0007:  push_literal               :z
+0009:  push_literal               :vx
+0011:  push_literal               :vy
+0013:  push_literal               :vz
+0015:  push_literal               :mass
+0017:  allow_private              
+0018:  send_stack                 :attr_accessor, 7
+0021:  pop                        
+0022:  push_rubinius              
+0023:  push_literal               :initialize
+0025:  push_literal               #<Rubinius::CompiledCode initialize file=../nbody.rb>
+0027:  push_scope                 
+0028:  push_variables             
+0029:  send_stack                 :method_visibility, 0
+0032:  send_stack                 :add_defn_method, 4
+0035:  pop                        
+0036:  push_rubinius              
+0037:  push_literal               :move_from_i
+0039:  push_literal               #<Rubinius::CompiledCode move_from_i file=../nbody.rb>
+0041:  push_scope                 
+0042:  push_variables             
+0043:  send_stack                 :method_visibility, 0
+0046:  send_stack                 :add_defn_method, 4
+0049:  ret                        
+----------------------------------------
+
+============= :initialize ==============
+Arguments:   7 required, 0 post, 7 total
+Arity:       7
+Locals:      7: x, y, z, vx, vy, vz, mass
+Stack size:  13
+Literals:    10: :@x, :@y, :@z, :DAYS_PER_YEAR, :*, :@vx, :@vy, :@vz, :SOLAR_MASS, :@mass
+Line:        14
+Lines to IP: 15: 0..23, 16: 24..62, 17: 63..72
+
+0000:  push_local                 0    # x
+0002:  push_local                 1    # y
+0004:  push_local                 2    # z
+0006:  dup_many                   3
+0008:  make_array                 3
+0010:  move_down                  3
+0012:  rotate                     3
+0014:  set_ivar                   :@x
+0016:  pop                        
+0017:  set_ivar                   :@y
+0019:  pop                        
+0020:  set_ivar                   :@z
+0022:  pop                        
+0023:  pop                        
+0024:  push_local                 3    # vx
+0026:  push_const_fast            :DAYS_PER_YEAR
+0028:  send_stack                 :*, 1
+0031:  push_local                 4    # vy
+0033:  push_const_fast            :DAYS_PER_YEAR
+0035:  send_stack                 :*, 1
+0038:  push_local                 5    # vz
+0040:  push_const_fast            :DAYS_PER_YEAR
+0042:  send_stack                 :*, 1
+0045:  dup_many                   3
+0047:  make_array                 3
+0049:  move_down                  3
+0051:  rotate                     3
+0053:  set_ivar                   :@vx
+0055:  pop                        
+0056:  set_ivar                   :@vy
+0058:  pop                        
+0059:  set_ivar                   :@vz
+0061:  pop                        
+0062:  pop                        
+0063:  push_local                 6    # mass
+0065:  push_const_fast            :SOLAR_MASS
+0067:  send_stack                 :*, 1
+0070:  set_ivar                   :@mass
+0072:  ret                        
+----------------------------------------
+
+============= :move_from_i =============
+Arguments:   4 required, 0 post, 4 total
+Arity:       4
+Locals:      12: bodies, nbodies, dt, i, b2, dx, dy, dz, distance, mag, b_mass_mag, b2_mass_mag
+Stack size:  16
+Literals:    25: :<, :[], :@x, :x, :-, :@y, :y, :@z, :z, :Math, :*, :+, :sqrt, :/, :@mass, :mass, :@vx, :@vy, :@vz, :vx, :vx=, :vy, :vy=, :vz, :vz=
+Line:        20
+Lines to IP: 21: 0..8, 22: 9..18, 23: 19..31, 24: 32..44, 25: 45..57, 27: 58..92, 28: 93..112, 29: 113..144, 31: 145..159, 32: 160..174, 33: 175..189, 34: 190..213, 35: 214..237, 36: 238..261, 37: 262..273, 0: 274..275, 40: 276..290, 41: 291..305, 42: 306..320
+
+0000:  push_local                 3    # i
+0002:  push_local                 1    # nbodies
+0004:  send_stack                 :<, 1
+0007:  goto_if_false              0274:
+0009:  push_local                 0    # bodies
+0011:  push_local                 3    # i
+0013:  send_stack                 :[], 1
+0016:  set_local                  4    # b2
+0018:  pop                        
+0019:  push_ivar                  :@x
+0021:  push_local                 4    # b2
+0023:  send_stack                 :x, 0
+0026:  send_stack                 :-, 1
+0029:  set_local                  5    # dx
+0031:  pop                        
+0032:  push_ivar                  :@y
+0034:  push_local                 4    # b2
+0036:  send_stack                 :y, 0
+0039:  send_stack                 :-, 1
+0042:  set_local                  6    # dy
+0044:  pop                        
+0045:  push_ivar                  :@z
+0047:  push_local                 4    # b2
+0049:  send_stack                 :z, 0
+0052:  send_stack                 :-, 1
+0055:  set_local                  7    # dz
+0057:  pop                        
+0058:  push_const_fast            :Math
+0060:  push_local                 5    # dx
+0062:  push_local                 5    # dx
+0064:  send_stack                 :*, 1
+0067:  push_local                 6    # dy
+0069:  push_local                 6    # dy
+0071:  send_stack                 :*, 1
+0074:  send_stack                 :+, 1
+0077:  push_local                 7    # dz
+0079:  push_local                 7    # dz
+0081:  send_stack                 :*, 1
+0084:  send_stack                 :+, 1
+0087:  send_stack                 :sqrt, 1
+0090:  set_local                  8    # distance
+0092:  pop                        
+0093:  push_local                 2    # dt
+0095:  push_local                 8    # distance
+0097:  push_local                 8    # distance
+0099:  send_stack                 :*, 1
+0102:  push_local                 8    # distance
+0104:  send_stack                 :*, 1
+0107:  send_stack                 :/, 1
+0110:  set_local                  9    # mag
+0112:  pop                        
+0113:  push_ivar                  :@mass
+0115:  push_local                 9    # mag
+0117:  send_stack                 :*, 1
+0120:  push_local                 4    # b2
+0122:  send_stack                 :mass, 0
+0125:  push_local                 9    # mag
+0127:  send_stack                 :*, 1
+0130:  dup_many                   2
+0132:  make_array                 2
+0134:  move_down                  2
+0136:  rotate                     2
+0138:  set_local                  10    # b_mass_mag
+0140:  pop                        
+0141:  set_local                  11    # b2_mass_mag
+0143:  pop                        
+0144:  pop                        
+0145:  push_ivar                  :@vx
+0147:  push_local                 5    # dx
+0149:  push_local                 11    # b2_mass_mag
+0151:  send_stack                 :*, 1
+0154:  send_stack                 :-, 1
+0157:  set_ivar                   :@vx
+0159:  pop                        
+0160:  push_ivar                  :@vy
+0162:  push_local                 6    # dy
+0164:  push_local                 11    # b2_mass_mag
+0166:  send_stack                 :*, 1
+0169:  send_stack                 :-, 1
+0172:  set_ivar                   :@vy
+0174:  pop                        
+0175:  push_ivar                  :@vz
+0177:  push_local                 7    # dz
+0179:  push_local                 11    # b2_mass_mag
+0181:  send_stack                 :*, 1
+0184:  send_stack                 :-, 1
+0187:  set_ivar                   :@vz
+0189:  pop                        
+0190:  push_local                 4    # b2
+0192:  dup_top                    
+0193:  send_stack                 :vx, 0
+0196:  push_local                 5    # dx
+0198:  push_local                 10    # b_mass_mag
+0200:  send_stack                 :*, 1
+0203:  send_stack                 :+, 1
+0206:  dup_top                    
+0207:  move_down                  2
+0209:  send_stack                 :vx=, 1
+0212:  pop                        
+0213:  pop                        
+0214:  push_local                 4    # b2
+0216:  dup_top                    
+0217:  send_stack                 :vy, 0
+0220:  push_local                 6    # dy
+0222:  push_local                 10    # b_mass_mag
+0224:  send_stack                 :*, 1
+0227:  send_stack                 :+, 1
+0230:  dup_top                    
+0231:  move_down                  2
+0233:  send_stack                 :vy=, 1
+0236:  pop                        
+0237:  pop                        
+0238:  push_local                 4    # b2
+0240:  dup_top                    
+0241:  send_stack                 :vz, 0
+0244:  push_local                 7    # dz
+0246:  push_local                 10    # b_mass_mag
+0248:  send_stack                 :*, 1
+0251:  send_stack                 :+, 1
+0254:  dup_top                    
+0255:  move_down                  2
+0257:  send_stack                 :vz=, 1
+0260:  pop                        
+0261:  pop                        
+0262:  push_local                 3    # i
+0264:  meta_push_1                
+0265:  send_stack                 :+, 1
+0268:  set_local                  3    # i
+0270:  pop                        
+0271:  check_interrupts           
+0272:  goto                       0000:
+0274:  push_nil                   
+0275:  pop                        
+0276:  push_ivar                  :@x
+0278:  push_local                 2    # dt
+0280:  push_ivar                  :@vx
+0282:  send_stack                 :*, 1
+0285:  send_stack                 :+, 1
+0288:  set_ivar                   :@x
+0290:  pop                        
+0291:  push_ivar                  :@y
+0293:  push_local                 2    # dt
+0295:  push_ivar                  :@vy
+0297:  send_stack                 :*, 1
+0300:  send_stack                 :+, 1
+0303:  set_ivar                   :@y
+0305:  pop                        
+0306:  push_ivar                  :@z
+0308:  push_local                 2    # dt
+0310:  push_ivar                  :@vz
+0312:  send_stack                 :*, 1
+0315:  send_stack                 :+, 1
+0318:  set_ivar                   :@z
+0320:  ret                        
+----------------------------------------
+
+=============== :energy ================
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      11: bodies, e, nbodies, i, b, j, b2, dx, dy, dz, distance
+Stack size:  16
+Literals:    7: 0.0, :size, :Range, :allocate, :initialize, <compiled code>, :each
+Line:        46
+Lines to IP: 47: 0..4, 48: 5..12, 50: 13..35, 62: 36..38
+
+0000:  push_literal               0.0
+0002:  set_local                  1    # e
+0004:  pop                        
+0005:  push_local                 0    # bodies
+0007:  send_stack                 :size, 0
+0010:  set_local                  2    # nbodies
+0012:  pop                        
+0013:  push_cpath_top             
+0014:  find_const_fast            :Range
+0016:  allow_private              
+0017:  send_stack                 :allocate, 0
+0020:  dup_top                    
+0021:  meta_push_0                
+0022:  push_local                 2    # nbodies
+0024:  push_true                  
+0025:  allow_private              
+0026:  send_stack                 :initialize, 3
+0029:  pop                        
+0030:  create_block               #<Rubinius::CompiledCode energy file=../nbody.rb>
+0032:  send_stack_with_block      :each, 0
+0035:  pop                        
+0036:  push_local                 1    # e
+0038:  ret                        
+----------------------------------------
+
+=============== :energy ================
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: $for_args
+Stack size:  7
+Literals:    13: :[], 0.5, :mass, :*, :vx, :vy, :+, :vz, :Range, :allocate, :initialize, <compiled code>, :each
+Line:        50
+Lines to IP: 51: 6..18, 52: 19..93, 53: 94..123
+
+0000:  push_local                 0
+0002:  set_local_depth            1, 3
+0005:  pop                        
+0006:  push_local_depth           1, 0
+0009:  push_local_depth           1, 3
+0012:  send_stack                 :[], 1
+0015:  set_local_depth            1, 4
+0018:  pop                        
+0019:  push_local_depth           1, 1
+0022:  push_literal               0.5
+0024:  push_local_depth           1, 4
+0027:  send_stack                 :mass, 0
+0030:  send_stack                 :*, 1
+0033:  push_local_depth           1, 4
+0036:  send_stack                 :vx, 0
+0039:  push_local_depth           1, 4
+0042:  send_stack                 :vx, 0
+0045:  send_stack                 :*, 1
+0048:  push_local_depth           1, 4
+0051:  send_stack                 :vy, 0
+0054:  push_local_depth           1, 4
+0057:  send_stack                 :vy, 0
+0060:  send_stack                 :*, 1
+0063:  send_stack                 :+, 1
+0066:  push_local_depth           1, 4
+0069:  send_stack                 :vz, 0
+0072:  push_local_depth           1, 4
+0075:  send_stack                 :vz, 0
+0078:  send_stack                 :*, 1
+0081:  send_stack                 :+, 1
+0084:  send_stack                 :*, 1
+0087:  send_stack                 :+, 1
+0090:  set_local_depth            1, 1
+0093:  pop                        
+0094:  push_cpath_top             
+0095:  find_const_fast            :Range
+0097:  allow_private              
+0098:  send_stack                 :allocate, 0
+0101:  dup_top                    
+0102:  push_local_depth           1, 3
+0105:  meta_push_1                
+0106:  send_stack                 :+, 1
+0109:  push_local_depth           1, 2
+0112:  push_true                  
+0113:  allow_private              
+0114:  send_stack                 :initialize, 3
+0117:  pop                        
+0118:  create_block               #<Rubinius::CompiledCode energy file=../nbody.rb>
+0120:  send_stack_with_block      :each, 0
+0123:  ret                        
+----------------------------------------
+
+=============== :energy ================
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: $for_args
+Stack size:  6
+Literals:    11: :[], :x, :-, :y, :z, :Math, :*, :+, :sqrt, :mass, :/
+Line:        53
+Lines to IP: 54: 6..18, 55: 19..37, 56: 38..56, 57: 57..75, 58: 76..117, 59: 118..148
+
+0000:  push_local                 0
+0002:  set_local_depth            2, 5
+0005:  pop                        
+0006:  push_local_depth           2, 0
+0009:  push_local_depth           2, 5
+0012:  send_stack                 :[], 1
+0015:  set_local_depth            2, 6
+0018:  pop                        
+0019:  push_local_depth           2, 4
+0022:  send_stack                 :x, 0
+0025:  push_local_depth           2, 6
+0028:  send_stack                 :x, 0
+0031:  send_stack                 :-, 1
+0034:  set_local_depth            2, 7
+0037:  pop                        
+0038:  push_local_depth           2, 4
+0041:  send_stack                 :y, 0
+0044:  push_local_depth           2, 6
+0047:  send_stack                 :y, 0
+0050:  send_stack                 :-, 1
+0053:  set_local_depth            2, 8
+0056:  pop                        
+0057:  push_local_depth           2, 4
+0060:  send_stack                 :z, 0
+0063:  push_local_depth           2, 6
+0066:  send_stack                 :z, 0
+0069:  send_stack                 :-, 1
+0072:  set_local_depth            2, 9
+0075:  pop                        
+0076:  push_const_fast            :Math
+0078:  push_local_depth           2, 7
+0081:  push_local_depth           2, 7
+0084:  send_stack                 :*, 1
+0087:  push_local_depth           2, 8
+0090:  push_local_depth           2, 8
+0093:  send_stack                 :*, 1
+0096:  send_stack                 :+, 1
+0099:  push_local_depth           2, 9
+0102:  push_local_depth           2, 9
+0105:  send_stack                 :*, 1
+0108:  send_stack                 :+, 1
+0111:  send_stack                 :sqrt, 1
+0114:  set_local_depth            2, 10
+0117:  pop                        
+0118:  push_local_depth           2, 1
+0121:  push_local_depth           2, 4
+0124:  send_stack                 :mass, 0
+0127:  push_local_depth           2, 6
+0130:  send_stack                 :mass, 0
+0133:  send_stack                 :*, 1
+0136:  push_local_depth           2, 10
+0139:  send_stack                 :/, 1
+0142:  send_stack                 :-, 1
+0145:  set_local_depth            2, 1
+0148:  ret                        
+----------------------------------------
+
+=========== :offset_momentum ===========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      6: bodies, px, py, pz, b, m
+Stack size:  12
+Literals:    12: 0.0, 0.0, 0.0, <compiled code>, :each, :[], :-@, :SOLAR_MASS, :/, :vx=, :vy=, :vz=
+Line:        65
+Lines to IP: 66: 0..23, 68: 24..31, 75: 32..40, 76: 41..60, 77: 61..80, 78: 81..100
+
+0000:  push_literal               0.0
+0002:  push_literal               0.0
+0004:  push_literal               0.0
+0006:  dup_many                   3
+0008:  make_array                 3
+0010:  move_down                  3
+0012:  rotate                     3
+0014:  set_local                  1    # px
+0016:  pop                        
+0017:  set_local                  2    # py
+0019:  pop                        
+0020:  set_local                  3    # pz
+0022:  pop                        
+0023:  pop                        
+0024:  push_local                 0    # bodies
+0026:  create_block               #<Rubinius::CompiledCode offset_momentum file=../nbody.rb>
+0028:  send_stack_with_block      :each, 0
+0031:  pop                        
+0032:  push_local                 0    # bodies
+0034:  meta_push_0                
+0035:  send_stack                 :[], 1
+0038:  set_local                  4    # b
+0040:  pop                        
+0041:  push_local                 4    # b
+0043:  push_local                 1    # px
+0045:  send_stack                 :-@, 0
+0048:  push_const_fast            :SOLAR_MASS
+0050:  send_stack                 :/, 1
+0053:  dup_top                    
+0054:  move_down                  2
+0056:  send_stack                 :vx=, 1
+0059:  pop                        
+0060:  pop                        
+0061:  push_local                 4    # b
+0063:  push_local                 2    # py
+0065:  send_stack                 :-@, 0
+0068:  push_const_fast            :SOLAR_MASS
+0070:  send_stack                 :/, 1
+0073:  dup_top                    
+0074:  move_down                  2
+0076:  send_stack                 :vy=, 1
+0079:  pop                        
+0080:  pop                        
+0081:  push_local                 4    # b
+0083:  push_local                 3    # pz
+0085:  send_stack                 :-@, 0
+0088:  push_const_fast            :SOLAR_MASS
+0090:  send_stack                 :/, 1
+0093:  dup_top                    
+0094:  move_down                  2
+0096:  send_stack                 :vz=, 1
+0099:  pop                        
+0100:  ret                        
+----------------------------------------
+
+=========== :offset_momentum ===========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: $for_args
+Stack size:  5
+Literals:    6: :mass, :vx, :*, :+, :vy, :vz
+Line:        68
+Lines to IP: 69: 6..15, 70: 16..37, 71: 38..59, 72: 60..81
+
+0000:  push_local                 0
+0002:  set_local_depth            1, 4
+0005:  pop                        
+0006:  push_local_depth           1, 4
+0009:  send_stack                 :mass, 0
+0012:  set_local_depth            1, 5
+0015:  pop                        
+0016:  push_local_depth           1, 1
+0019:  push_local_depth           1, 4
+0022:  send_stack                 :vx, 0
+0025:  push_local_depth           1, 5
+0028:  send_stack                 :*, 1
+0031:  send_stack                 :+, 1
+0034:  set_local_depth            1, 1
+0037:  pop                        
+0038:  push_local_depth           1, 2
+0041:  push_local_depth           1, 4
+0044:  send_stack                 :vy, 0
+0047:  push_local_depth           1, 5
+0050:  send_stack                 :*, 1
+0053:  send_stack                 :+, 1
+0056:  set_local_depth            1, 2
+0059:  pop                        
+0060:  push_local_depth           1, 3
+0063:  push_local_depth           1, 4
+0066:  send_stack                 :vz, 0
+0069:  push_local_depth           1, 5
+0072:  send_stack                 :*, 1
+0075:  send_stack                 :+, 1
+0078:  set_local_depth            1, 3
+0081:  ret                        
+----------------------------------------
+
+============== :__block__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      2: i, b
+Stack size:  9
+Literals:    5: :<, :BODIES, :[], :+, :move_from_i
+Line:        142
+Lines to IP: 143: 0..3, 144: 4..13, 145: 14..23, 146: 24..43, 147: 44..55, 0: 56..57
+
+0000:  meta_push_0                
+0001:  set_local                  0
+0003:  pop                        
+0004:  push_local                 0
+0006:  push_local_depth           1, 2
+0009:  send_stack                 :<, 1
+0012:  goto_if_false              0056:
+0014:  push_const_fast            :BODIES
+0016:  push_local                 0
+0018:  send_stack                 :[], 1
+0021:  set_local                  1
+0023:  pop                        
+0024:  push_local                 1
+0026:  push_const_fast            :BODIES
+0028:  push_local_depth           1, 2
+0031:  push_local_depth           1, 3
+0034:  push_local                 0
+0036:  meta_push_1                
+0037:  send_stack                 :+, 1
+0040:  send_stack                 :move_from_i, 4
+0043:  pop                        
+0044:  push_local                 0
+0046:  meta_push_1                
+0047:  send_stack                 :+, 1
+0050:  set_local                  0
+0052:  pop                        
+0053:  check_interrupts           
+0054:  goto                       0004:
+0056:  push_nil                   
+0057:  ret                        
+----------------------------------------
