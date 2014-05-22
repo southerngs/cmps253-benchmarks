@@ -3,6 +3,13 @@
 # Contributed by Sokolov Yura
 # Modified by Rick Branson, Andy Fingerhut
 
+if(ARGV.size != 2)
+  puts "Usage ./fasta <logfile> <number of seq>"
+  exit
+end
+
+$log = File.open(ARGV[0].to_s, 'w')
+
 $last = 42.0
 
 GR_IM = 139968.0
@@ -56,7 +63,7 @@ def generate_rand_finder(tbl)
 end
 
 def make_repeat_fasta(id, desc, src, n)
-    puts ">#{id} #{desc}"
+    $log.puts ">#{id} #{desc}"
     v = nil
     width = 60
     l = src.length
@@ -72,17 +79,17 @@ def make_repeat_fasta(id, desc, src, n)
     i = 0
     printed = 0
     while printed <= (n - width) do
-      puts "#{p[i]}"
+      $log.puts "#{p[i]}"
       printed += width
       i = (i + width) % l
     end
     if printed < n
-      puts "#{p[i].slice(0, n-printed)}"
+      $log.puts "#{p[i].slice(0, n-printed)}"
     end
 end
 
 def make_random_fasta(id, desc, table, n)
-    puts ">#{id} #{desc}"
+    $log.puts ">#{id} #{desc}"
     rand, v = nil,nil
     width = 60
     chunk = 1 * width
@@ -104,15 +111,15 @@ def make_random_fasta(id, desc, table, n)
     end
 
     for i in 1..(n/width)
-      puts rwidth.collect(&collector).join
+      $log.puts rwidth.collect(&collector).join
     end
     if n%width != 0
-      puts (1..(n%width)).collect(&collector).join
+      $log.puts (1..(n%width)).collect(&collector).join
     end
 end
 
 
-n = (ARGV[0] or 27).to_i
+n = (ARGV[1] or 27).to_i
 
 make_repeat_fasta('ONE', 'Homo sapiens alu', alu, n*2)
 make_random_fasta('TWO', 'IUB ambiguity codes', iub, n*3)

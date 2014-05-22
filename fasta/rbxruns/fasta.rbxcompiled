@@ -1,0 +1,731 @@
+
+============= :__script__ ==============
+Arguments:   0 required, 0 post, 0 total
+Arity:       0
+Locals:      4: alu, iub, homosapiens, n
+Stack size:  20
+Literals:    81: :ARGV, :size, :!=, "Usage ./fasta <logfile> <number of seq>", :puts, :exit, :Globals, :$log, :File, :[], :to_s, "w", :open, :[]=, :$last, 42.0, :GR_IM, 139968.0, :const_set, :GR_IA, 3877.0, :GR_IC, 29573.0, "GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG", "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA", :+, "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT", "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA", "GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG", "AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC", "AGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA", "a", 0.27, "c", 0.12, "g", 0.12, "t", 0.27, "B", 0.02, "D", 0.02, "H", 0.02, "K", 0.02, "M", 0.02, "N", 0.02, "R", 0.02, "S", 0.02, "V", 0.02, "W", 0.02, "Y", 0.02, 0.302954942668, 0.1979883004921, 0.1975473066391, 0.3015094502008, :generate_rand_finder, <compiled code>, :method_visibility, :add_defn_method, :make_repeat_fasta, <compiled code>, :make_random_fasta, <compiled code>, :to_i, "ONE", "Homo sapiens alu", :*, "TWO", "IUB ambiguity codes", "THREE", "Homo sapiens frequency"
+Lines to IP: 6: 0..10, 7: 11..19, 8: 20..24, 6: 25..25, 0: 26..26, 11: 27..52, 13: 53..63, 15: 64..72, 16: 73..81, 17: 82..90, 20: 91..93, 21: 94..99, 22: 100..105, 23: 106..111, 24: 112..117, 25: 118..123, 26: 124..129, 19: 130..132, 29: 133..139, 30: 140..146, 31: 147..153, 32: 154..160, 34: 161..167, 35: 168..174, 36: 175..181, 37: 182..188, 38: 189..195, 39: 196..202, 40: 203..209, 41: 210..216, 42: 217..223, 43: 224..230, 44: 231..239, 28: 240..242, 47: 243..249, 48: 250..256, 49: 257..263, 50: 264..272, 46: 273..275, 53: 276..289, 65: 290..303, 91: 304..317, 122: 318..335, 124: 336..355, 125: 356..376, 126: 377..399
+
+0000:  push_const_fast            :ARGV
+0002:  send_stack                 :size, 0
+0005:  meta_push_2                
+0006:  send_stack                 :!=, 1
+0009:  goto_if_false              0025:
+0011:  push_self                  
+0012:  push_literal               "Usage ./fasta <logfile> <number of seq>"
+0014:  string_dup                 
+0015:  allow_private              
+0016:  send_stack                 :puts, 1
+0019:  pop                        
+0020:  push_self                  
+0021:  send_method                :exit
+0023:  goto                       0026:
+0025:  push_nil                   
+0026:  pop                        
+0027:  push_rubinius              
+0028:  find_const_fast            :Globals
+0030:  push_literal               :$log
+0032:  push_const_fast            :File
+0034:  push_const_fast            :ARGV
+0036:  meta_push_0                
+0037:  send_stack                 :[], 1
+0040:  send_stack                 :to_s, 0
+0043:  push_literal               "w"
+0045:  string_dup                 
+0046:  send_stack                 :open, 2
+0049:  send_stack                 :[]=, 2
+0052:  pop                        
+0053:  push_rubinius              
+0054:  find_const_fast            :Globals
+0056:  push_literal               :$last
+0058:  push_literal               42.0
+0060:  send_stack                 :[]=, 2
+0063:  pop                        
+0064:  push_scope                 
+0065:  push_literal               :GR_IM
+0067:  push_literal               139968.0
+0069:  send_stack                 :const_set, 2
+0072:  pop                        
+0073:  push_scope                 
+0074:  push_literal               :GR_IA
+0076:  push_literal               3877.0
+0078:  send_stack                 :const_set, 2
+0081:  pop                        
+0082:  push_scope                 
+0083:  push_literal               :GR_IC
+0085:  push_literal               29573.0
+0087:  send_stack                 :const_set, 2
+0090:  pop                        
+0091:  push_literal               "GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG"
+0093:  string_dup                 
+0094:  push_literal               "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA"
+0096:  string_dup                 
+0097:  send_stack                 :+, 1
+0100:  push_literal               "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT"
+0102:  string_dup                 
+0103:  send_stack                 :+, 1
+0106:  push_literal               "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA"
+0108:  string_dup                 
+0109:  send_stack                 :+, 1
+0112:  push_literal               "GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG"
+0114:  string_dup                 
+0115:  send_stack                 :+, 1
+0118:  push_literal               "AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC"
+0120:  string_dup                 
+0121:  send_stack                 :+, 1
+0124:  push_literal               "AGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA"
+0126:  string_dup                 
+0127:  send_stack                 :+, 1
+0130:  set_local                  0    # alu
+0132:  pop                        
+0133:  push_literal               "a"
+0135:  string_dup                 
+0136:  push_literal               0.27
+0138:  make_array                 2
+0140:  push_literal               "c"
+0142:  string_dup                 
+0143:  push_literal               0.12
+0145:  make_array                 2
+0147:  push_literal               "g"
+0149:  string_dup                 
+0150:  push_literal               0.12
+0152:  make_array                 2
+0154:  push_literal               "t"
+0156:  string_dup                 
+0157:  push_literal               0.27
+0159:  make_array                 2
+0161:  push_literal               "B"
+0163:  string_dup                 
+0164:  push_literal               0.02
+0166:  make_array                 2
+0168:  push_literal               "D"
+0170:  string_dup                 
+0171:  push_literal               0.02
+0173:  make_array                 2
+0175:  push_literal               "H"
+0177:  string_dup                 
+0178:  push_literal               0.02
+0180:  make_array                 2
+0182:  push_literal               "K"
+0184:  string_dup                 
+0185:  push_literal               0.02
+0187:  make_array                 2
+0189:  push_literal               "M"
+0191:  string_dup                 
+0192:  push_literal               0.02
+0194:  make_array                 2
+0196:  push_literal               "N"
+0198:  string_dup                 
+0199:  push_literal               0.02
+0201:  make_array                 2
+0203:  push_literal               "R"
+0205:  string_dup                 
+0206:  push_literal               0.02
+0208:  make_array                 2
+0210:  push_literal               "S"
+0212:  string_dup                 
+0213:  push_literal               0.02
+0215:  make_array                 2
+0217:  push_literal               "V"
+0219:  string_dup                 
+0220:  push_literal               0.02
+0222:  make_array                 2
+0224:  push_literal               "W"
+0226:  string_dup                 
+0227:  push_literal               0.02
+0229:  make_array                 2
+0231:  push_literal               "Y"
+0233:  string_dup                 
+0234:  push_literal               0.02
+0236:  make_array                 2
+0238:  make_array                 15
+0240:  set_local                  1    # iub
+0242:  pop                        
+0243:  push_literal               "a"
+0245:  string_dup                 
+0246:  push_literal               0.302954942668
+0248:  make_array                 2
+0250:  push_literal               "c"
+0252:  string_dup                 
+0253:  push_literal               0.1979883004921
+0255:  make_array                 2
+0257:  push_literal               "g"
+0259:  string_dup                 
+0260:  push_literal               0.1975473066391
+0262:  make_array                 2
+0264:  push_literal               "t"
+0266:  string_dup                 
+0267:  push_literal               0.3015094502008
+0269:  make_array                 2
+0271:  make_array                 4
+0273:  set_local                  2    # homosapiens
+0275:  pop                        
+0276:  push_rubinius              
+0277:  push_literal               :generate_rand_finder
+0279:  push_literal               #<Rubinius::CompiledCode generate_rand_finder file=../fasta.rb>
+0281:  push_scope                 
+0282:  push_variables             
+0283:  send_stack                 :method_visibility, 0
+0286:  send_stack                 :add_defn_method, 4
+0289:  pop                        
+0290:  push_rubinius              
+0291:  push_literal               :make_repeat_fasta
+0293:  push_literal               #<Rubinius::CompiledCode make_repeat_fasta file=../fasta.rb>
+0295:  push_scope                 
+0296:  push_variables             
+0297:  send_stack                 :method_visibility, 0
+0300:  send_stack                 :add_defn_method, 4
+0303:  pop                        
+0304:  push_rubinius              
+0305:  push_literal               :make_random_fasta
+0307:  push_literal               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0309:  push_scope                 
+0310:  push_variables             
+0311:  send_stack                 :method_visibility, 0
+0314:  send_stack                 :add_defn_method, 4
+0317:  pop                        
+0318:  push_const_fast            :ARGV
+0320:  meta_push_1                
+0321:  send_stack                 :[], 1
+0324:  dup_top                    
+0325:  goto_if_true               0330:
+0327:  pop                        
+0328:  push_int                   27
+0330:  send_stack                 :to_i, 0
+0333:  set_local                  3    # n
+0335:  pop                        
+0336:  push_self                  
+0337:  push_literal               "ONE"
+0339:  string_dup                 
+0340:  push_literal               "Homo sapiens alu"
+0342:  string_dup                 
+0343:  push_local                 0    # alu
+0345:  push_local                 3    # n
+0347:  meta_push_2                
+0348:  send_stack                 :*, 1
+0351:  allow_private              
+0352:  send_stack                 :make_repeat_fasta, 4
+0355:  pop                        
+0356:  push_self                  
+0357:  push_literal               "TWO"
+0359:  string_dup                 
+0360:  push_literal               "IUB ambiguity codes"
+0362:  string_dup                 
+0363:  push_local                 1    # iub
+0365:  push_local                 3    # n
+0367:  push_int                   3
+0369:  send_stack                 :*, 1
+0372:  allow_private              
+0373:  send_stack                 :make_random_fasta, 4
+0376:  pop                        
+0377:  push_self                  
+0378:  push_literal               "THREE"
+0380:  string_dup                 
+0381:  push_literal               "Homo sapiens frequency"
+0383:  string_dup                 
+0384:  push_local                 2    # homosapiens
+0386:  push_local                 3    # n
+0388:  push_int                   5
+0390:  send_stack                 :*, 1
+0393:  allow_private              
+0394:  send_stack                 :make_random_fasta, 4
+0397:  pop                        
+0398:  push_true                  
+0399:  ret                        
+----------------------------------------
+
+======== :generate_rand_finder =========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      2: tbl, rb
+Stack size:  4
+Literals:    6: "lambda do |n| \n", <compiled code>, :each, "end\n", :+, :eval
+Line:        53
+Lines to IP: 54: 0..5, 56: 6..13, 60: 14..24, 62: 25..32
+
+0000:  push_literal               "lambda do |n| \n"
+0002:  string_dup                 
+0003:  set_local                  1    # rb
+0005:  pop                        
+0006:  push_local                 0    # tbl
+0008:  create_block               #<Rubinius::CompiledCode generate_rand_finder file=../fasta.rb>
+0010:  send_stack_with_block      :each, 0
+0013:  pop                        
+0014:  push_local                 1    # rb
+0016:  push_literal               "end\n"
+0018:  string_dup                 
+0019:  send_stack                 :+, 1
+0022:  set_local                  1    # rb
+0024:  pop                        
+0025:  push_self                  
+0026:  push_local                 1    # rb
+0028:  allow_private              
+0029:  send_stack                 :eval, 1
+0032:  ret                        
+----------------------------------------
+
+======== :generate_rand_finder =========
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: va, vb
+Stack size:  9
+Literals:    6: "return ", :inspect, :to_s, " if ", " > n\n", :+
+Line:        56
+Lines to IP: 57: 0..33
+
+0000:  push_local_depth           1, 1
+0003:  push_literal               "return "
+0005:  push_local                 0
+0007:  send_stack                 :inspect, 0
+0010:  allow_private              
+0011:  meta_to_s                  :to_s
+0013:  push_literal               " if "
+0015:  push_local                 1
+0017:  send_stack                 :inspect, 0
+0020:  allow_private              
+0021:  meta_to_s                  :to_s
+0023:  push_literal               " > n\n"
+0025:  string_build               5
+0027:  send_stack                 :+, 1
+0030:  set_local_depth            1, 1
+0033:  ret                        
+----------------------------------------
+
+========== :make_repeat_fasta ==========
+Arguments:   4 required, 0 post, 4 total
+Arity:       4
+Locals:      11: id, desc, src, n, v, width, l, s, i, p, printed
+Stack size:  16
+Literals:    18: :Globals, :$log, :[], ">", :to_s, " ", :puts, :length, :+, :-, :/, :*, :slice, :[]=, :%, :!=, :<=, :<
+Line:        65
+Lines to IP: 66: 0..27, 67: 28..31, 68: 32..36, 69: 37..44, 70: 45..72, 71: 73..76, 72: 77..81, 73: 82..102, 74: 103..117, 75: 118..125, 76: 126..146, 77: 147..164, 0: 165..166, 79: 167..170, 80: 171..174, 81: 175..188, 82: 189..212, 83: 213..222, 84: 223..240, 0: 241..242, 86: 243..251, 87: 252..287, 86: 288..288, 0: 289..289
+
+0000:  push_rubinius              
+0001:  find_const_fast            :Globals
+0003:  push_literal               :$log
+0005:  send_stack                 :[], 1
+0008:  push_literal               ">"
+0010:  push_local                 0    # id
+0012:  allow_private              
+0013:  meta_to_s                  :to_s
+0015:  push_literal               " "
+0017:  push_local                 1    # desc
+0019:  allow_private              
+0020:  meta_to_s                  :to_s
+0022:  string_build               4
+0024:  send_stack                 :puts, 1
+0027:  pop                        
+0028:  push_nil                   
+0029:  set_local                  4    # v
+0031:  pop                        
+0032:  push_int                   60
+0034:  set_local                  5    # width
+0036:  pop                        
+0037:  push_local                 2    # src
+0039:  send_stack                 :length, 0
+0042:  set_local                  6    # l
+0044:  pop                        
+0045:  push_local                 2    # src
+0047:  push_local                 5    # width
+0049:  push_local                 6    # l
+0051:  send_stack                 :+, 1
+0054:  meta_push_1                
+0055:  send_stack                 :-, 1
+0058:  push_local                 6    # l
+0060:  send_stack                 :/, 1
+0063:  meta_push_1                
+0064:  send_stack                 :+, 1
+0067:  send_stack                 :*, 1
+0070:  set_local                  7    # s
+0072:  pop                        
+0073:  meta_push_0                
+0074:  set_local                  8    # i
+0076:  pop                        
+0077:  make_array                 0
+0079:  set_local                  9    # p
+0081:  pop                        
+0082:  push_local                 9    # p
+0084:  push_local                 8    # i
+0086:  push_local                 7    # s
+0088:  push_local                 8    # i
+0090:  push_local                 5    # width
+0092:  send_stack                 :slice, 2
+0095:  dup_top                    
+0096:  move_down                  3
+0098:  send_stack                 :[]=, 2
+0101:  pop                        
+0102:  pop                        
+0103:  push_local                 8    # i
+0105:  push_local                 5    # width
+0107:  send_stack                 :+, 1
+0110:  push_local                 6    # l
+0112:  send_stack                 :%, 1
+0115:  set_local                  8    # i
+0117:  pop                        
+0118:  push_local                 8    # i
+0120:  meta_push_0                
+0121:  send_stack                 :!=, 1
+0124:  goto_if_false              0165:
+0126:  push_local                 9    # p
+0128:  push_local                 8    # i
+0130:  push_local                 7    # s
+0132:  push_local                 8    # i
+0134:  push_local                 5    # width
+0136:  send_stack                 :[], 2
+0139:  dup_top                    
+0140:  move_down                  3
+0142:  send_stack                 :[]=, 2
+0145:  pop                        
+0146:  pop                        
+0147:  push_local                 8    # i
+0149:  push_local                 5    # width
+0151:  send_stack                 :+, 1
+0154:  push_local                 6    # l
+0156:  send_stack                 :%, 1
+0159:  set_local                  8    # i
+0161:  pop                        
+0162:  check_interrupts           
+0163:  goto                       0118:
+0165:  push_nil                   
+0166:  pop                        
+0167:  meta_push_0                
+0168:  set_local                  8    # i
+0170:  pop                        
+0171:  meta_push_0                
+0172:  set_local                  10    # printed
+0174:  pop                        
+0175:  push_local                 10    # printed
+0177:  push_local                 3    # n
+0179:  push_local                 5    # width
+0181:  send_stack                 :-, 1
+0184:  send_stack                 :<=, 1
+0187:  goto_if_false              0241:
+0189:  push_rubinius              
+0190:  find_const_fast            :Globals
+0192:  push_literal               :$log
+0194:  send_stack                 :[], 1
+0197:  push_local                 9    # p
+0199:  push_local                 8    # i
+0201:  send_stack                 :[], 1
+0204:  allow_private              
+0205:  meta_to_s                  :to_s
+0207:  string_build               1
+0209:  send_stack                 :puts, 1
+0212:  pop                        
+0213:  push_local                 10    # printed
+0215:  push_local                 5    # width
+0217:  send_stack                 :+, 1
+0220:  set_local                  10    # printed
+0222:  pop                        
+0223:  push_local                 8    # i
+0225:  push_local                 5    # width
+0227:  send_stack                 :+, 1
+0230:  push_local                 6    # l
+0232:  send_stack                 :%, 1
+0235:  set_local                  8    # i
+0237:  pop                        
+0238:  check_interrupts           
+0239:  goto                       0175:
+0241:  push_nil                   
+0242:  pop                        
+0243:  push_local                 10    # printed
+0245:  push_local                 3    # n
+0247:  send_stack                 :<, 1
+0250:  goto_if_false              0288:
+0252:  push_rubinius              
+0253:  find_const_fast            :Globals
+0255:  push_literal               :$log
+0257:  send_stack                 :[], 1
+0260:  push_local                 9    # p
+0262:  push_local                 8    # i
+0264:  send_stack                 :[], 1
+0267:  meta_push_0                
+0268:  push_local                 3    # n
+0270:  push_local                 10    # printed
+0272:  send_stack                 :-, 1
+0275:  send_stack                 :slice, 2
+0278:  allow_private              
+0279:  meta_to_s                  :to_s
+0281:  string_build               1
+0283:  send_stack                 :puts, 1
+0286:  goto                       0289:
+0288:  push_nil                   
+0289:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   4 required, 0 post, 4 total
+Arity:       4
+Locals:      13: id, desc, table, n, rand, v, width, chunk, prob, rwidth, f, collector, i
+Stack size:  19
+Literals:    29: :Globals, :$log, :[], ">", :to_s, " ", :puts, :*, 0.0, :Range, :allocate, :initialize, <compiled code>, :each, :generate_rand_finder, :RUBY_PLATFORM, "java", :==, <compiled code>, :lambda, <compiled code>, :/, <compiled code>, :%, :!=, :Proc, :__from_block__, :collect, :join
+Line:        91
+Lines to IP: 92: 0..27, 93: 28..44, 94: 45..49, 95: 50..58, 96: 59..63, 97: 64..82, 98: 83..90, 99: 91..100, 101: 101..110, 102: 111..121, 107: 122..130, 0: 131..131, 113: 132..158, 116: 159..171, 117: 172..224, 116: 225..225, 0: 226..226
+
+0000:  push_rubinius              
+0001:  find_const_fast            :Globals
+0003:  push_literal               :$log
+0005:  send_stack                 :[], 1
+0008:  push_literal               ">"
+0010:  push_local                 0    # id
+0012:  allow_private              
+0013:  meta_to_s                  :to_s
+0015:  push_literal               " "
+0017:  push_local                 1    # desc
+0019:  allow_private              
+0020:  meta_to_s                  :to_s
+0022:  string_build               4
+0024:  send_stack                 :puts, 1
+0027:  pop                        
+0028:  push_nil                   
+0029:  push_nil                   
+0030:  dup_many                   2
+0032:  make_array                 2
+0034:  move_down                  2
+0036:  rotate                     2
+0038:  set_local                  4    # rand
+0040:  pop                        
+0041:  set_local                  5    # v
+0043:  pop                        
+0044:  pop                        
+0045:  push_int                   60
+0047:  set_local                  6    # width
+0049:  pop                        
+0050:  meta_push_1                
+0051:  push_local                 6    # width
+0053:  send_stack                 :*, 1
+0056:  set_local                  7    # chunk
+0058:  pop                        
+0059:  push_literal               0.0
+0061:  set_local                  8    # prob
+0063:  pop                        
+0064:  push_cpath_top             
+0065:  find_const_fast            :Range
+0067:  allow_private              
+0068:  send_stack                 :allocate, 0
+0071:  dup_top                    
+0072:  meta_push_1                
+0073:  push_local                 6    # width
+0075:  allow_private              
+0076:  send_stack                 :initialize, 2
+0079:  pop                        
+0080:  set_local                  9    # rwidth
+0082:  pop                        
+0083:  push_local                 2    # table
+0085:  create_block               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0087:  send_stack_with_block      :each, 0
+0090:  pop                        
+0091:  push_self                  
+0092:  push_local                 2    # table
+0094:  allow_private              
+0095:  send_stack                 :generate_rand_finder, 1
+0098:  set_local                  10    # f
+0100:  pop                        
+0101:  push_const_fast            :RUBY_PLATFORM
+0103:  push_literal               "java"
+0105:  string_dup                 
+0106:  send_stack                 :==, 1
+0109:  goto_if_false              0122:
+0111:  push_self                  
+0112:  create_block               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0114:  allow_private              
+0115:  send_stack_with_block      :lambda, 0
+0118:  set_local                  11    # collector
+0120:  goto                       0131:
+0122:  push_self                  
+0123:  create_block               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0125:  allow_private              
+0126:  send_stack_with_block      :lambda, 0
+0129:  set_local                  11    # collector
+0131:  pop                        
+0132:  push_cpath_top             
+0133:  find_const_fast            :Range
+0135:  allow_private              
+0136:  send_stack                 :allocate, 0
+0139:  dup_top                    
+0140:  meta_push_1                
+0141:  push_local                 3    # n
+0143:  push_local                 6    # width
+0145:  send_stack                 :/, 1
+0148:  allow_private              
+0149:  send_stack                 :initialize, 2
+0152:  pop                        
+0153:  create_block               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0155:  send_stack_with_block      :each, 0
+0158:  pop                        
+0159:  push_local                 3    # n
+0161:  push_local                 6    # width
+0163:  send_stack                 :%, 1
+0166:  meta_push_0                
+0167:  send_stack                 :!=, 1
+0170:  goto_if_false              0225:
+0172:  push_rubinius              
+0173:  find_const_fast            :Globals
+0175:  push_literal               :$log
+0177:  send_stack                 :[], 1
+0180:  push_cpath_top             
+0181:  find_const_fast            :Range
+0183:  allow_private              
+0184:  send_stack                 :allocate, 0
+0187:  dup_top                    
+0188:  meta_push_1                
+0189:  push_local                 3    # n
+0191:  push_local                 6    # width
+0193:  send_stack                 :%, 1
+0196:  allow_private              
+0197:  send_stack                 :initialize, 2
+0200:  pop                        
+0201:  push_local                 11    # collector
+0203:  dup_top                    
+0204:  is_nil                     
+0205:  goto_if_true               0214:
+0207:  push_cpath_top             
+0208:  find_const_fast            :Proc
+0210:  swap_stack                 
+0211:  send_stack                 :__from_block__, 1
+0214:  send_stack_with_block      :collect, 0
+0217:  send_stack                 :join, 0
+0220:  send_stack                 :puts, 1
+0223:  goto                       0226:
+0225:  push_nil                   
+0226:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: v
+Stack size:  7
+Literals:    3: :[], :+, :[]=
+Line:        98
+Lines to IP: 
+
+0000:  push_local                 0
+0002:  meta_push_1                
+0003:  push_local_depth           1, 8
+0006:  push_local                 0
+0008:  meta_push_1                
+0009:  send_stack                 :[], 1
+0012:  send_stack                 :+, 1
+0015:  set_local_depth            1, 8
+0018:  dup_top                    
+0019:  move_down                  3
+0021:  send_stack                 :[]=, 2
+0024:  pop                        
+0025:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: x
+Stack size:  6
+Literals:    13: :Globals, :$last, :[], :GR_IA, :*, :GR_IC, :+, :GR_IM, :%, :[]=, :/, <compiled code>, :find
+Line:        102
+Lines to IP: 103: 0..39, 104: 40..52
+
+0000:  push_rubinius              
+0001:  find_const_fast            :Globals
+0003:  push_literal               :$last
+0005:  push_rubinius              
+0006:  find_const_fast            :Globals
+0008:  push_literal               :$last
+0010:  send_stack                 :[], 1
+0013:  push_const_fast            :GR_IA
+0015:  send_stack                 :*, 1
+0018:  push_const_fast            :GR_IC
+0020:  send_stack                 :+, 1
+0023:  push_const_fast            :GR_IM
+0025:  send_stack                 :%, 1
+0028:  send_stack                 :[]=, 2
+0031:  push_const_fast            :GR_IM
+0033:  send_stack                 :/, 1
+0036:  set_local_depth            1, 4
+0039:  pop                        
+0040:  push_local_depth           1, 2
+0043:  create_block               #<Rubinius::CompiledCode make_random_fasta file=../fasta.rb>
+0045:  send_stack_with_block      :find, 0
+0048:  meta_push_0                
+0049:  send_stack                 :[], 1
+0052:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   2 required, 0 post, 2 total
+Arity:       2
+Locals:      2: va, vb
+Stack size:  5
+Literals:    1: :>
+Line:        104
+Lines to IP: 
+
+0000:  push_local                 1
+0002:  push_local_depth           2, 4
+0005:  send_stack                 :>, 1
+0008:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: x
+Stack size:  6
+Literals:    12: :Globals, :$last, :[], :GR_IA, :*, :GR_IC, :+, :GR_IM, :%, :[]=, :/, :call
+Line:        107
+Lines to IP: 108: 0..39, 109: 40..49
+
+0000:  push_rubinius              
+0001:  find_const_fast            :Globals
+0003:  push_literal               :$last
+0005:  push_rubinius              
+0006:  find_const_fast            :Globals
+0008:  push_literal               :$last
+0010:  send_stack                 :[], 1
+0013:  push_const_fast            :GR_IA
+0015:  send_stack                 :*, 1
+0018:  push_const_fast            :GR_IC
+0020:  send_stack                 :+, 1
+0023:  push_const_fast            :GR_IM
+0025:  send_stack                 :%, 1
+0028:  send_stack                 :[]=, 2
+0031:  push_const_fast            :GR_IM
+0033:  send_stack                 :/, 1
+0036:  set_local_depth            1, 4
+0039:  pop                        
+0040:  push_local_depth           1, 10
+0043:  push_local_depth           1, 4
+0046:  send_stack                 :call, 1
+0049:  ret                        
+----------------------------------------
+
+========== :make_random_fasta ==========
+Arguments:   1 required, 0 post, 1 total
+Arity:       1
+Locals:      1: $for_args
+Stack size:  6
+Literals:    8: :Globals, :$log, :[], :Proc, :__from_block__, :collect, :join, :puts
+Line:        113
+Lines to IP: 114: 6..40
+
+0000:  push_local                 0
+0002:  set_local_depth            1, 12
+0005:  pop                        
+0006:  push_rubinius              
+0007:  find_const_fast            :Globals
+0009:  push_literal               :$log
+0011:  send_stack                 :[], 1
+0014:  push_local_depth           1, 9
+0017:  push_local_depth           1, 11
+0020:  dup_top                    
+0021:  is_nil                     
+0022:  goto_if_true               0031:
+0024:  push_cpath_top             
+0025:  find_const_fast            :Proc
+0027:  swap_stack                 
+0028:  send_stack                 :__from_block__, 1
+0031:  send_stack_with_block      :collect, 0
+0034:  send_stack                 :join, 0
+0037:  send_stack                 :puts, 1
+0040:  ret                        
+----------------------------------------
