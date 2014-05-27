@@ -1,18 +1,17 @@
 #!/bin/bash
 
-if [ "$#" -lt "2" ]; then
-  echo "Usage ./ruby-bench.sh <ruby_bin> <inputs_dir>"
+if [ "$#" -lt "3" ]; then
+  echo "Usage ./ruby-bench.sh <ruby_bin> <inputs_dir> <bench_root>"
   exit
 fi
 
-#RUBYBIN=/local/gsouther/projs/cmps253-rbx/bin/rbx
 RUBYBIN=$1
 INPUTS_DIR=$2
-BENCHCMD="../${BENCH}/${BENCH}.rb"
+BENCH_ROOT=$3
 
 runbench_param() {
   LOG=$1-$2.log
-  BENCHCMD="../$1/$1.rb"
+  BENCHCMD="$BENCH_ROOT/$1/$1.rb"
   PARAM=$2
   TIMECMD="/usr/bin/time -f '$1-$2: %e sec (%C)'"
   eval "$TIMECMD $RUBYBIN $BENCHCMD $PARAM $LOG" 
@@ -20,7 +19,7 @@ runbench_param() {
 
 runbench_input() {
   LOG=$1-$2.log
-  BENCHCMD="../$1/$1.rb"
+  BENCHCMD="$BENCH_ROOT/$1/$1.rb"
   PARAM=$INPUTS_DIR/fasta$2.txt
   TIMECMD="/usr/bin/time -f '$1-$2: %e sec (%C)'"
   eval "$TIMECMD $RUBYBIN $BENCHCMD $PARAM $LOG" 
