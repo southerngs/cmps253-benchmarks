@@ -4,6 +4,13 @@
 # contributed by Jesse Millikan
 # Modified by Wesley Moxam
 
+if(ARGV.size != 2)
+  puts "Usage: rbx binarytrees <size> [logfile]"
+  exit(1)
+end
+ 
+logfile = File.open(ARGV[1].to_s,"w")
+
 
 def item_check(left, item, right)
   return item if left.nil?
@@ -25,7 +32,7 @@ max_depth = min_depth + 2 if min_depth + 2 > max_depth
 stretch_depth = max_depth + 1
 stretch_tree = bottom_up_tree(0, stretch_depth)
 
-puts "stretch tree of depth #{stretch_depth}\t check: #{item_check(*stretch_tree)}"
+logfile.puts "stretch tree of depth #{stretch_depth}\t check: #{item_check(*stretch_tree)}"
 stretch_tree = nil
 
 long_lived_tree = bottom_up_tree(0, max_depth)
@@ -43,8 +50,8 @@ min_depth.step(max_depth + 1, 2) do |depth|
     check += item_check(*temp_tree)
   end
 
-  puts "#{iterations * 2}\t trees of depth #{depth}\t check: #{check}"
+  logfile.puts "#{iterations * 2}\t trees of depth #{depth}\t check: #{check}"
 end
 
-puts "long lived tree of depth #{max_depth}\t check: #{item_check(*long_lived_tree)}"
+logfile.puts "long lived tree of depth #{max_depth}\t check: #{item_check(*long_lived_tree)}"
 
