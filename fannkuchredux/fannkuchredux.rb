@@ -53,6 +53,14 @@ def fannkuch(n)
   end
 end
 
+if(ARGV.size != 2)
+  puts "Usage: rbx fannkuchredux.rb <swaps> <logfile>"
+  exit(1)
+end
+
+logfile = File.open(ARGV[1].to_s, "w")
+
 n = (ARGV[0] || 1).to_i
 sum, flips = fannkuch(n)
-printf "%d\nPfannkuchen(%d) = %d\n", sum, n, flips
+logfile.printf "%d\nPfannkuchen(%d) = %d\n", sum, n, flips
+
