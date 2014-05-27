@@ -1,4 +1,4 @@
-#Fannkuch benchmark
+#Fasta benchmark
 
 ##Algorithm:
 
