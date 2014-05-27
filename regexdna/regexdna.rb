@@ -5,16 +5,16 @@
 # optimized & parallelized by Rick Branson
 # optimized for ruby2 by Aaron Tavistock
 
-if(ARGV.size != 1)
-  puts "Usage: rbx regexdna.rb <logfile> < <input_file>"
+if(ARGV.size != 2)
+  puts "Usage: rbx regexdna.rb <input_file> <logfile>"
   exit(1)
 end
 
-logfile = File.new(ARGV[0].to_s, "w")
-
+logfile = File.new(ARGV[1].to_s, "w")
+inputfile = File.open(ARGV[0].to_s, "r")
 require 'fiber'
 
-seq = $stdin.read.force_encoding("ASCII-8BIT")
+seq = inputfile.read.force_encoding("ASCII-8BIT")
 origin_len = seq.size
 
 seq.gsub!(/>.*\n|\n/,'')

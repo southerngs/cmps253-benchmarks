@@ -5,12 +5,15 @@
 # Modified by Doug King
 # Modified by Joseph LaFata
 
-if(ARGV.size != 1)
-  puts "Usage: rbx revcomp.rb <logfile> < <input_file>"
+if(ARGV.size != 2)
+  puts "Usage: rbx revcomp.rb <input_file> <logfile>"
   exit(1)
 end
 
-$logfile = File.new(ARGV[0].to_s, "w")
+$logfile = File.new(ARGV[1].to_s, "w")
+$inputfile = File.open(ARGV[0].to_s, "r")
+#tracer = Rubinius::Optrace.new
+#tracer.start
 
 seq=""
 
@@ -20,7 +23,7 @@ def revcomp(seq)
   0.step(stringlen,60) {|x| $logfile.print seq[x,60] , "\n"}
 end
 
-STDIN.each do |line|
+$inputfile.each do |line|
   if line.include? '>'
     if !seq.empty?
       revcomp(seq)

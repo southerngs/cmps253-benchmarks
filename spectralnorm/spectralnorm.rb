@@ -6,6 +6,12 @@
 #   - nicer naming for readability
 
 
+if(ARGV.size != 2)
+  puts "Usage: rbx spectralnorm.rb <size> <logfile>"
+  exit(1)
+end
+
+logfile = File.open(ARGV[1].to_s, "w")
 
 ARRAY_LENGTH = ARGV[0].to_i
 
@@ -60,4 +66,4 @@ while i < ARRAY_LENGTH
   i += 1
 end
 
-print "%0.9f" % (Math.sqrt(vBv/vv)), "\n"
+logfile.print "%0.9f" % (Math.sqrt(vBv/vv)), "\n"

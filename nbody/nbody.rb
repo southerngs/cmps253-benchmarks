@@ -125,12 +125,12 @@ BODIES = [
 
 
 if(ARGV.size != 2) then
-  puts "Usage rbx nbody.rb <logfile> <size>"
+  puts "Usage rbx nbody.rb <size> <logfile>"
   exit(1)
 end
 
-logfile = File.new(ARGV[0].to_s,"w")
-n = Integer(ARGV[1])
+logfile = File.new(ARGV[1].to_s,"w")
+n = Integer(ARGV[0])
 
 offset_momentum(BODIES)
 

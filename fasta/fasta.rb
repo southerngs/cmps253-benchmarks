@@ -4,11 +4,11 @@
 # Modified by Rick Branson, Andy Fingerhut
 
 if(ARGV.size != 2)
-  puts "Usage ./fasta <logfile> <number of seq>"
+  puts "Usage ./fasta <number of seq> <logfile>"
   exit
 end
 
-$log = File.open(ARGV[0].to_s, 'w')
+$log = File.open(ARGV[1].to_s, 'w')
 
 $last = 42.0
 
@@ -119,7 +119,7 @@ def make_random_fasta(id, desc, table, n)
 end
 
 
-n = (ARGV[1] or 27).to_i
+n = (ARGV[0] or 27).to_i
 
 make_repeat_fasta('ONE', 'Homo sapiens alu', alu, n*2)
 make_random_fasta('TWO', 'IUB ambiguity codes', iub, n*3)

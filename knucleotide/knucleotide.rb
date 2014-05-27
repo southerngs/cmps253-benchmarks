@@ -3,12 +3,13 @@
 #
 # contributed by Aaron Tavistock
 
-if(ARGV.empty?)
-  puts "Usage rbx knucleotide <logfile> < input_file.txt"
+if(ARGV.size != 2)
+  puts "Usage: rbx knucleotide <input_file> <logfile>"
   exit
 end
 
-logfile = File.new(ARGV[0].to_s, "w")
+logfile = File.new(ARGV[1].to_s, "w")
+inputfile = File.open(ARGV[0].to_s, "r")
 
 def frequency(seq, keys)
   counts = Hash.new(0)
@@ -33,7 +34,8 @@ def count(seq, keys)
   end
 end
 
-_, seq = STDIN.read.scan(/(\n>THREE[^\n]*\n)([^>]*)\n/).flatten
+#_, seq = STDIN.read.scan(/(\n>THREE[^\n]*\n)([^>]*)\n/).flatten
+_, seq = inputfile.read.scan(/(\n>THREE[^\n]*\n)([^>]*)\n/).flatten
 seq.force_encoding('ASCII-8BIT')
 seq.gsub!(/\s/, '')
 
