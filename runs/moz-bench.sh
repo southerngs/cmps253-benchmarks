@@ -31,7 +31,7 @@ runbench_param "fannkuchredux" "10"
 runbench_param "fasta" "250000"
 runbench_input "knucleotide" "250000"
 runbench_param "nbody" "500000"
-#runbench_input "regexdna" "50000"
+runbench_input "regexdna" "50000"
 #runbench_param "spectralnorm" "500"
 
 
