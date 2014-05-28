@@ -15,11 +15,17 @@ Each program should:
 
 ##Running:
 
-Ruby:
+**Ruby:**
 
-    rbx binarytrees <size>
+    rbx binarytrees <size> <logfile>
 
-Javascript:
+**Javascript: Mozilla Spidermonkey**
+
+   js binarytrees-moz <size> 
+
+**Javascript: Chrome V8**
+
+   d8 --nodebugger binarytrees-v8.js -- <size>
 
 ##Parameters:
 
