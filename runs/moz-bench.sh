@@ -26,7 +26,7 @@ runbench_param() {
 
 # All bench with smallest input
 runbench_param "binarytrees" "12"
-#runbench_param "fannkuchredux" "10"
+runbench_param "fannkuchredux" "10"
 #runbench_param "fasta" "250000"
 #runbench_input "knucleotide" "250000"
 #runbench_param "nbody" "500000"
