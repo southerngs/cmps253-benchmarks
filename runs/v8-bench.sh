@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ "$#" -lt "3" ]; then
-  echo "Usage ./v8-bench.sh <v8-js_bin> <inputs_dir> <bench_root>"
+if [ "$#" -lt "4" ]; then
+  echo "Usage ./v8-bench.sh <v8-js_bin> <inputs_dir> <bench_root> <test|full>"
   exit
 fi
 
