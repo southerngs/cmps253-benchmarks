@@ -19,7 +19,7 @@ runbench_param() {
 
 runbench_input() {
   LOG=$1-$2.log
-  BENCHCMD="$BENCH_ROOT/$1/$1-moz.js"
+  BENCHCMD="$BENCH_ROOT/$1/$1-v8.js"
   PARAM=$INPUTS_DIR/fasta$2.txt
   TIMECMD="/usr/bin/time -f '$1-$2: %e sec (%C)'"
   eval "$TIMECMD $JSBIN $BENCHCMD < $PARAM > $LOG" 
