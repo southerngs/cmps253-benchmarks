@@ -25,3 +25,5 @@ The `v8-js_bin` is the command line binary build for V8 javascript.  It is typic
 `"v8/out/x64.release/d8 --nodebugger"`.  Note that the `--nodebugger` option is supplied
 to improve performance during benchmarking.
 
+##Java
+    ./java-bench.sh <java_bin> <inputs_dir> <bench_root>
