@@ -17,3 +17,5 @@ count.times do
   total += compute_val
 end
 
+puts total
+
