@@ -1,28 +1,33 @@
 #!/bin/bash
 
-if [ "$#" -lt "4" ]; then
-  echo "Usage ./java-bench.sh <java_bin> <inputs_dir> <bench_root> <test|full>"
+if [ "$#" -lt "5" ]; then
+  echo "Usage ./java-bench.sh <java_bin> <inputs_dir> <bench_root> <test|full> <javac_bin>"
   exit
 fi
 
 JAVABIN=$1
 INPUTS_DIR=$2
 BENCH_ROOT=$3
+JAVACBIN=$5
 
 runbench_param() {
   LOG=$1-$2.log
-  BENCHCMD="$BENCH_ROOT/$1"
+  BENCHSRC="$BENCH_ROOT/$1/$1.java"
+  BENCHNAME=$1
   PARAM=$2
   TIMECMD="/usr/bin/time -f '$1-$2: %e sec (%C)'"
-  eval "$TIMECMD $JAVABIN -cp $BENCHCMD $1 $PARAM > $LOG"
+  eval "$JAVACBIN $BENCHSRC"
+  eval "$TIMECMD $JAVABIN -cp $BENCH_ROOT/$BENCHNAME $BENCHNAME $PARAM > $LOG"
 }
 
 runbench_input() {
   LOG=$1-$2.log
-  BENCHCMD="$BENCH_ROOT/$1"
+  BENCHSRC="$BENCH_ROOT/$1/$1.java"
+  BENCHNAME=$1
   PARAM=$INPUTS_DIR/fasta$2.txt
   TIMECMD="/usr/bin/time -f '$1-$2: %e sec (%C)'"
-  eval "$TIMECMD $JAVABIN -cp $BENCHCMD $1 < $PARAM > $LOG" 
+  eval "$JAVACBIN $BENCHSRC"
+  eval "$TIMECMD $JAVABIN -cp $BENCH_ROOT/$BENCHNAME $BENCHNAME < $PARAM > $LOG" 
 }
 
 if [ "$4" != "full" ]
